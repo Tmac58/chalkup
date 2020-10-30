@@ -8,7 +8,6 @@ const SALT_ROUNDS = 10 // bcrypt
 const session = require('express-session')
 
 router.get('/add-climb', (req,res) => {
-
     res.render('users/add-climb')
 })
 

@@ -10,6 +10,18 @@ body {
         background: #282828;
     }
 
+    #goBackBtn {
+        color: #6bbb57;
+        margin-bottom: 0;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 2em;
+    }
+    #goBackBtn:active {
+        color: #33ff00;
+        outline: none;
+    }
+
     .mainCont {
         display: flex;
         flex-direction: column;
@@ -57,7 +69,7 @@ body {
 
     .userIcon {
         height: 150px;
-        margin-top: 50px;
+        margin-top: 0px;
         margin-bottom: 30px;
     }
 
@@ -85,10 +97,6 @@ body {
         outline: none;
     }
 
-    .passwordInputCont {
-
-    }
-
     .showPasswordBtn {
         font-size: 1.5em;
         color: #6bbb57;
@@ -106,4 +114,17 @@ body {
         color: white;
     }
 
+    .messageCont {
+        font-size: 1.2em;
+        margin-top: 5px;
+        padding: 10px;
+        border: 2px solid red;
+        color: red;
+        display: flex;
+    }
+
+    .warning {
+        color: red;
+        margin-right: 10px;
+    }
 }

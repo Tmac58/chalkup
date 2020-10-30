@@ -7,6 +7,7 @@
     </head>
 
     <body>
+        <a href="/"><i id="goBackBtn" class="fas fa-chevron-circle-left"></i></a>
 
         <div class="mainCont">
 
@@ -19,15 +20,21 @@
                         <input type="text" name="username" class="signUpInput" id="usernameInput" placeholder="Username" pattern="[A-Za-z0-9]+">
                     </div>
                     <div class='inputFieldCont'>
-                        {{! password must contain 8 or more chars that are of at least one number, and one uppercase and lowercase letter }}
-                        <input type="password" name="password" class="signUpInput " id="passwordInput" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        <input type="password" name="password" class="signUpInput " id="passwordInput" placeholder="Password">
                         <i id="showPasswordBtn" class="far fa-eye showPasswordBtn"></i>
                     </div>
                     <div class='inputFieldCont'>
-                        {{! password must contain 8 or more chars that are of at least one number, and one uppercase and lowercase letter }}
-                        <input type="password" name="confirmPassword" class="signUpInput " id="confirmPasswordInput" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        <input type="password" name="confirmPassword" class="signUpInput " id="confirmPasswordInput" placeholder="Confirm Password" >
                         <i id="showConfirmPasswordBtn" class="far fa-eye showPasswordBtn"></i>
                     </div>
+
+                    {{#message}}
+                        <div class="messageCont">
+                            <i class="fas fa-exclamation-triangle warning"></i>
+                            <span class="messageText">{{message}}</span>
+                        </div>
+                    {{/message}}
+
                     <button class='signInBtn' id='logInBtn'>Sign Up</button>
                 </form>
             </div>

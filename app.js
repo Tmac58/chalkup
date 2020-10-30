@@ -22,7 +22,7 @@ global.__basedir = __dirname // global variable for root directory path name
 
 // MIDDLEWARE
 app.use('/', indexRoutes) // any route at root handled in ./routes/index
-app.use('/users', userRoutes) // an rout at /users/...
+// app.use('/users', userRoutes) // an rout at /users/...
 
 // STATIC FOLDERS
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css
@@ -32,9 +32,6 @@ app.engine('mustache', mustacheExpress(VIEWS_PATH + '/partials', '.mustache'))
 app.set('views', VIEWS_PATH)
 app.set('view engine', 'mustache')
 
-app.get('/', (req,res) => {
-    res.render('index')
-})
 
 //start server
 app.listen(PORT, () => console.log("Server is Running"))

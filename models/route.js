@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     grade: DataTypes.STRING,
     attempts: DataTypes.INTEGER,
-    style: DataTypes.ARRAY,
+    style: DataTypes.ARRAY(DataTypes.STRING),
     color: DataTypes.STRING,
     rating: DataTypes.INTEGER,
     sent: DataTypes.BOOLEAN,

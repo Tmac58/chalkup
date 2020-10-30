@@ -10,8 +10,7 @@ module.exports = {
       },
       session_id: {
         type: Sequelize.INTEGER,
-        references: {model: 'sessions', field: 'id'}
-
+        references: { model: 'sessions', id: 'id'}
       },
       name: {
         type: Sequelize.STRING
@@ -23,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       style: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER)
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       color: {
         type: Sequelize.STRING

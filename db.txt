@@ -1,0 +1,36 @@
+-Users
+    # username
+    # password
+    # id
+
+    -Gyms
+        #rating
+        #location
+        #gym rating
+        #FK(userId)
+        #gymId        
+
+    -Sessions
+        # time
+        # Gyms
+        #id
+        #FK(userId)
+        #FK(gym)
+
+        -Routes
+            #name (input text)
+            #grade (string ex. 5.5 - 5.9, 5.10- -> 5.14+)
+            #attempts (int)
+            #style (select)
+            #color
+            #rating (5-stars)
+            #sent (default=false)
+            #time
+            #FK(sessionId)
+
+
+!!!!!!!!! PAGES !!!!!!
+-Login/Register
+-Nearby Gyms
+-User Data
+-Session (start workout)

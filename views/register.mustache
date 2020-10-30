@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        {{> header}}
+        <title>Redpoint</title>
+    </head>
+
+    <body>
+
+        <h1>REGISTER</h1>
+
+        <div class="inputCont">
+            <form action='/register' method='POST'>
+                {{! username contains letters and numbers only }}
+                <input type="text" name="username" class="signUpInput" id="usernameInput" placeholder="Username" pattern="[A-Za-z0-9]+">
+                {{! password must contain 8 or more chars that are of at least one number, and one uppercase and lowercase letter }}
+                <input type="password" name="password" class="signUpInput" id="passwordInput" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <button class='signInBtn' id='logInBtn'>Sign Up</button>
+            </form>
+        </div>
+
+        
+
+
+
+        
+    </body>
+</html>

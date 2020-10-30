@@ -1,3 +1,92 @@
 body {
-    background: lightgreen;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 425px) {
+    body {
+        background: #282828;
+    }
+
+    .mainCont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #6bbb57;
+        font-size:  2em;
+    }
+
+    .logoIconCont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+
+    }
+
+    .logoIcon {
+        height: 250px;
+    }
+
+    .signInBtnCont {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .signInBtn {
+        margin: 10px;
+        font-size: 1.5em;
+        width: 250px;
+        background: none;
+        border-radius: 25px;
+        color: #6bbb57;
+        border: 2px solid #6bbb57;
+        outline: none;
+        padding: 5px;
+    }
+
+    .userIcon {
+        height: 150px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .inputCont form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signUpInput {
+        font-size: 1.5em;
+        margin: 10px;
+        border-radius: 8px 0 8px 0;
+        border-bottom: 5px solid #6bbb57;
+        color: white;
+        background: #5b5b5b;
+    }
+    .signUpInput:focus {
+        border-bottom: 5px solid #33ff00;
+        outline: none;
+    }
+
+    #logInBtn {
+        margin-top: 40px;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
 }

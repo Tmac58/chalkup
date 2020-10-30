@@ -4,8 +4,8 @@ const router = express.Router() //express-router
 const { v4: uuidv4 } = require('uuid'); // for unique ids
 const bcrypt = require('bcrypt') //encryption
 const models = require('../models') //sequelize models //go up 2-routes to find folder
-const { Router } = require('express')
 const SALT_ROUNDS = 10 // bcrypt
+const session = require('express-session')
 
 
 router.get('/', (req,res) => {
@@ -71,9 +71,9 @@ router.post('/login', async (req,res) => {
             if (result) {
                 // create a session and redirect user
                 if (req.session) {
-                    // set session user to userId
+                    // set session user to userId & authenticate user
                     req.session.user = {userId: user.id}
-                    console.log(session.user)
+                    req.session.isAuthenticated = true
                     // send user to homepage (data)
                     res.redirect('/users/data')
                 }
@@ -82,6 +82,8 @@ router.post('/login', async (req,res) => {
                 res.render('login', {message: 'Incorrect username of password'})
             }
         })
+    } else {
+        res.redirect('/login')
     }
 })
 

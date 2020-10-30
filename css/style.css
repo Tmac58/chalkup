@@ -31,7 +31,6 @@ body {
         align-items: center;
         height: 200px;
         width: 200px;
-
     }
 
     .logoIcon {
@@ -71,14 +70,32 @@ body {
     .signUpInput {
         font-size: 1.5em;
         margin: 10px;
-        border-radius: 8px 0 8px 0;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 16px 0 16px 0;
         border-bottom: 5px solid #6bbb57;
         color: white;
         background: #5b5b5b;
+        opacity: 0.7;
+        transition: 0.2s ease-out;
     }
     .signUpInput:focus {
         border-bottom: 5px solid #33ff00;
+        opacity: 1;
         outline: none;
+    }
+
+    .passwordInputCont {
+
+    }
+
+    .showPasswordBtn {
+        font-size: 1.5em;
+        color: #6bbb57;
+        z-index: 1;
+        position: relative;
+        left: -50px;
+        width: 0;
     }
 
     #logInBtn {

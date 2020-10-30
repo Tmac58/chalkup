@@ -33,6 +33,7 @@ app.use('/users', authenticate.authenticate, userRoutes) // any route at /users/
 
 // STATIC FOLDERS
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css
+app.use('/icons', express.static('icons')) // icons folder
 
 // set up template engine
 app.engine('mustache', mustacheExpress(VIEWS_PATH + '/partials', '.mustache'))

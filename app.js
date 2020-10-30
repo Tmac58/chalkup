@@ -21,6 +21,7 @@ SALT_ROUNDS = 10
 global.__basedir = __dirname // global variable for root directory path name
 
 // MIDDLEWARE
+app.use(bodyParser.urlencoded({extended: false}))
 app.use('/', indexRoutes) // any route at root handled in ./routes/index
 // app.use('/users', userRoutes) // an rout at /users/...
 

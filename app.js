@@ -35,7 +35,8 @@ app.use('/users', userRoutes) // NO AUTHENTICATION, DELETE AND USE ABOVE FOR REL
 // STATIC FOLDERS
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css
 app.use('/icons', express.static('icons')) // icons folder
-app.use('/js', express.static('js'))
+app.use('/js', express.static('js')) // client-side JS files
+
 
 // set up template engine
 app.engine('mustache', mustacheExpress(VIEWS_PATH + '/partials', '.mustache'))

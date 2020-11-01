@@ -16,5 +16,9 @@ router.get('/data', (req,res) => {
     res.render('users/data')
 })
 
+router.get('/map', (req, res) => {
+    res.render('users/map')
+})
+
 // export to app.js
 module.exports = router

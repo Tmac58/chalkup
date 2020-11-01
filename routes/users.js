@@ -14,12 +14,14 @@ router.get('/add-climb', (req,res) => {
 router.post('/create-session', async (req,res) => {
     let userId = req.session.user.userId
 
+
     let climbSession = models.UserSession.build({
         userId: userId
     })
 
     let persistedSession = await climbSession.save()
     if (persistedSession != null) {
+        req.session.user.sessionId = climbSession.id
         res.redirect('/users/add-routes')
     } else {
         res.render('users/add-climb', {message: "Unable to create session"})
@@ -30,8 +32,36 @@ router.get('/add-routes', (req,res) => {
     res.render('users/add-routes')
 })
 
-router.post('/add-routes', (req,res) => {
-    
+router.post('/add-routes', async (req,res) => {
+    let userId = req.session.user.userId
+    let sessionId = req.session.user.sessionId
+    let routeName = req.body.routeName
+    let routeGrade = req.body.routeGrade
+    let routeColor = req.body.routeColor
+    let starRating = req.body.stars
+    let routeSent = req.body.routeSent
+    if (routeSent) {
+        routeSent = true
+    } else {
+        routeSent = false
+    }
+
+    console.log(userId, sessionId)
+
+    let route = models.UserRoute.build({
+        name: routeName,
+        grade: routeGrade,
+        color: routeColor,
+        rating: starRating,
+        sent: routeSent,
+        sessionId: sessionId,
+        userId: userId
+    })
+
+    let persistedRoute = await route.save()
+    if (persistedRoute != null) {
+        res.redirect('/users/add-routes')
+    }
 })
 
 

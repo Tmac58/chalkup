@@ -255,17 +255,25 @@ body {
         align-items: center;
         color: white;
         background: #3c3c3c;
+        padding-right: 40px;
+        font-size: 1.2em;
     }
 
     #routeCont {
-        display: flex; /*CHANGE TO NONE*/
+        display: none; /*CHANGE TO NONE*/
         flex-direction: column;
         align-items: center;
-        height: 75vh;
+        height: 90vh;
         width: 95%;
         margin-top: 10px;
         background: #3c3c3c;
         color: #6bbb57;
+    }
+
+    #addRouteForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #routeDetailsTitle{
@@ -281,6 +289,7 @@ body {
 
     #routeNameInput {
         width: 90%;
+        text-align: center;
     }
 
     #routeNameInput::placeholder {
@@ -288,7 +297,7 @@ body {
     }
 
     #routeGrade {
-        width: 16%;
+        width: 35%;
     }
 
     input[type=checkbox]{
@@ -412,6 +421,12 @@ body {
     
       .routeInputText {
           font-size: 1.2em;
+          border-radius: 16px 0 16px 0;
+      }
+
+      #submitRouteBtn {
+          margin-top: 50px;
+          padding: 10px;
       }
     
 }

@@ -3,10 +3,12 @@
 
     <head>
         {{> header}}
-        <title>Redpoint</title>
+        <title>CHALK-UP</title>
     </head>
 
     <body>
+
+        <a href="/"><i id="goBackBtn" class="fas fa-chevron-circle-left"></i></a>
 
         <div class="mainCont">
 
@@ -14,10 +16,22 @@
 
             <div class="inputCont">
                 <form action='/login' method='POST'>
-                    {{! username contains letters and numbers only }}
-                    <input type="text" name="username" class="signUpInput" id="usernameInput" placeholder="Username" pattern="[A-Za-z0-9]+">
-                    {{! password must contain 8 or more chars that are of at least one number, and one uppercase and lowercase letter }}
-                    <input type="password" name="password" class="signUpInput" id="passwordInput" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <div class='inputFieldCont'>
+                        {{! username contains letters and numbers only }}
+                        <input type="text" name="username" class="signUpInput" id="usernameInput" placeholder="Username" pattern="[A-Za-z0-9]+">
+                    </div>
+                    <div class='inputFieldCont'>
+                        <input type="password" name="password" class="signUpInput " id="passwordInput" placeholder="Password">
+                        <i id="showPasswordBtn" class="far fa-eye showPasswordBtn"></i>
+                    </div>
+
+                    {{#message}}
+                        <div class="messageCont">
+                            <i class="fas fa-exclamation-triangle warning"></i>
+                            <span class="messageText">{{message}}</span>
+                        </div>
+                    {{/message}}
+                    
                     <button class='signInBtn' id='logInBtn'>Log In</button>
                 </form>
             </div>
@@ -26,6 +40,6 @@
 
 
 
-        
+        {{> footerIndex}}
     </body>
 </html>

@@ -19,6 +19,11 @@ router.get('/register', (req,res) => {
 router.post('/register', async(req,res) => {
     const username = req.body.username
     const password = req.body.password
+    const confirmPassword = req.body.confirmPassword
+
+    if(password !== confirmPassword) {
+        res.render('register', {message: "Password does not match"})
+    }
 
     // check table: Users for username
     let persistedUser = await models.Users.findOne({
@@ -43,7 +48,7 @@ router.post('/register', async(req,res) => {
                 if(savedUser != null) {
                     res.redirect('login')
                 } else { // if user already exists in Users table -> send user to registration page
-                    res.render('/register', {message: "User already exists"})
+                    res.render('register', {message: "User already exists"})
                 }
             }
         })
@@ -79,7 +84,7 @@ router.post('/login', async (req,res) => {
                 }
             } else {
                 // if error signing in -> send user back to login page
-                res.render('login', {message: 'Incorrect username of password'})
+                res.render('login', {message: 'Incorrect username or password'})
             }
         })
     } else {

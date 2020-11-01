@@ -10,6 +10,18 @@ body {
         background: #282828;
     }
 
+    #goBackBtn {
+        color: #6bbb57;
+        margin-bottom: 0;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 2em;
+    }
+    #goBackBtn:active {
+        color: #33ff00;
+        outline: none;
+    }
+
     .mainCont {
         display: flex;
         flex-direction: column;
@@ -31,7 +43,6 @@ body {
         align-items: center;
         height: 200px;
         width: 200px;
-
     }
 
     .logoIcon {
@@ -58,7 +69,7 @@ body {
 
     .userIcon {
         height: 150px;
-        margin-top: 50px;
+        margin-top: 0px;
         margin-bottom: 30px;
     }
 
@@ -71,14 +82,28 @@ body {
     .signUpInput {
         font-size: 1.5em;
         margin: 10px;
-        border-radius: 8px 0 8px 0;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 16px 0 16px 0;
         border-bottom: 5px solid #6bbb57;
         color: white;
         background: #5b5b5b;
+        opacity: 0.7;
+        transition: 0.2s ease-out;
     }
     .signUpInput:focus {
         border-bottom: 5px solid #33ff00;
+        opacity: 1;
         outline: none;
+    }
+
+    .showPasswordBtn {
+        font-size: 1.5em;
+        color: #6bbb57;
+        z-index: 1;
+        position: relative;
+        left: -50px;
+        width: 0;
     }
 
     #logInBtn {
@@ -167,4 +192,17 @@ body {
     }
     
 
+    .messageCont {
+        font-size: 1.2em;
+        margin-top: 5px;
+        padding: 10px;
+        border: 2px solid red;
+        color: red;
+        display: flex;
+    }
+
+    .warning {
+        color: red;
+        margin-right: 10px;
+    }
 }

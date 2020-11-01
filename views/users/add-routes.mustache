@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        {{> header}}
+        <title>CHALK-UP</title>
+    </head>
+
+    <body>
+
+    <div class="mainCont">
+
+        <div class="testMenu">
+            <a>Data</a>
+            <a>Add Climb</a>
+            <a>Nearby</a>
+            <a>Info</a>
+        </div>
+
+        <div class="addRouteCont">
+            <div id="addRouteBtnCont">
+                <i id="addRouteBtn" class="fas fa-plus addRouteBtn"></i>
+            </div>
+            <div id="addRouteLabelCont">
+                <span id="addRouteLabel">Add Route</span>
+            </div>
+        </div>
+
+        <div id="routeCont">
+            <h4 id='routeDetailsTitle'>Route Details</h4>
+
+            <label class="routeDetailsLabel" for="routeName">Name</label>
+            <input type="text" name='routeName' id='routeNameInput' placeholder='Route Name'>
+            
+            <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
+            <select name='routeGrade' id="routeGrade">
+                <option value="5.5">5.5</option>
+                <option value="5.6">5.6</option>
+                <option value="5.7">5.7</option>
+                <option value="5.8">5.8</option>
+                <option value="5.9">5.9</option>
+                <option value="5.10-">5.10-</option>
+                <option value="5.10">5.10</option>
+                <option value="5.10+">5.10+</option>
+                <option value="5.11-">5.11-</option>
+                <option value="5.11">5.11</option>
+                <option value="5.11-">5.11+</option>
+                <option value="5.11+">5.12-</option>
+                <option value="5.12-">5.12</option>
+                <option value="5.12">5.12+</option>
+                <option value="5.12+">5.13-</option>
+                <option value="5.13-">5.13</option>
+                <option value="5.13">5.13+</option>
+                <option value="5.13+">5.14-</option>
+                <option value="5.14-">5.14</option>
+                <option value="5.14">5.14+</option>                
+            </select>
+
+            <label class="routeDetailsLabel" for='routeColor'>Color</label>
+            <select name='routeColor' id="routeColor">
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="grey">Grey</option>
+                <option value="orange">Orange</option>
+                <option value="pink">Pink</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </select>
+
+            <label class="routeDetailsLabel" for='routeSent'>Sent</label>
+            <input type="checkbox" id="sentSwitch" />
+            <label for="sentSwitch" class="sentLabel">Toggle</label>
+
+  
+
+            
+
+        </div>
+
+
+    </div>
+
+        <script src='../js/users.js'></script>
+    </body>
+</html>

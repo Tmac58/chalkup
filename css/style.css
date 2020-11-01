@@ -139,45 +139,135 @@ body {
     }
 
     .addSessionCont {
-        margin-top: 20px;
-        width: 100%;
-        display: flex;
-        align-items: center;
+        margin-top: 175px;
     }
 
-    #addSessionBtnCont {
-        background: black;
+    #addSessionBtn {
+        background: #3c3c3c;
+        color: #6bbb57;
+        outline: none;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 10px solid #6bbb57;
+        font-size: 1.1em;
+    }
+
+    .addRouteCont {
+        margin-top: 20px;
+        width: 100%;
+        display:flex;
+    }
+
+    #addRouteBtnCont {
         display: flex;
         justify-content: center;
         align-items: center;
-
-    }
-
-    .addSessionBtn {
+        font-size: 1.2em;
+        width: 50px;
+        height: 50px;
+        background: black;
         color: #6bbb57;
-        padding: 20px;
     }
 
-    #addSessionLabelCont {
+    #addRouteLabelCont {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
-        width: 100%;
-        height: 56px;
         background: #3c3c3c;
     }
 
     #routeCont {
-        display: flex;
+        display: flex; /*CHANGE TO NONE*/
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin: 20px;
+        height: 75vh;
         width: 95%;
-        height: 100vh;
+        margin-top: 10px;
         background: #3c3c3c;
-
-        display: none;
+        color: #6bbb57;
     }
+
+    #routeDetailsTitle{
+        color: #6bbb57;
+        margin: 10px;
+        border-bottom: 2px solid #6bbb57
+    }
+
+    .routeDetailsLabel {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    #routeNameInput {
+        width: 90%;
+    }
+
+    #routeNameInput::placeholder {
+        color: black;
+    }
+
+    #routeGrade {
+        width: 16%;
+    }
+
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    .sentLabel {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 90px;
+        height: 40px;
+        background: grey;
+        display: block;
+        border-radius: 40px;
+        position: relative;
+        outline:none;
+    }
+    .sentLabel:focus {
+        outline:none !important;
+    }
+    #sentSwitch {
+        outline:none !important;
+    }
+    
+    .sentLabel:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 30px;
+        transition: 0.3s;
+        outline:none;
+    }
+    
+    input:checked + label {
+        background: #6bbb57;
+        outline:none;
+    }
+    
+    input:checked + .sentLabel:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+        outline:none;
+    }
+    
+    .sentLabel:active:after {
+        width: 40px;
+        outline:none;
+    }
+
+
+    
+
+    
 }

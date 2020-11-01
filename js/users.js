@@ -1,7 +1,7 @@
-const addSessionBtn = document.getElementById('addSessionBtn')
+const addRouteBtn = document.getElementById('addRouteBtn')
 const routeCont = document.getElementById('routeCont')
 
-addSessionBtn.addEventListener('click', () => {
+addRouteBtn.addEventListener('click', () => {
     routeCont.style.display = "flex";
 })
 

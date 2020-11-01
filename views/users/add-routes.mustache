@@ -29,11 +29,13 @@
         <div id="routeCont">
             <h4 id='routeDetailsTitle'>Route Details</h4>
 
+            
+
             <label class="routeDetailsLabel" for="routeName">Name</label>
-            <input type="text" name='routeName' id='routeNameInput' placeholder='Route Name'>
+            <input class="routeInputText" type="text" name='routeName' id='routeNameInput' placeholder='Route Name'>
             
             <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
-            <select name='routeGrade' id="routeGrade">
+            <select class='routeInputText routeGrade' id="routeGrade">
                 <option value="5.5">5.5</option>
                 <option value="5.6">5.6</option>
                 <option value="5.7">5.7</option>
@@ -57,7 +59,7 @@
             </select>
 
             <label class="routeDetailsLabel" for='routeColor'>Color</label>
-            <select name='routeColor' id="routeColor">
+            <select class="routeInputText" name='routeColor' id="routeColor">
                 <option value="black">Black</option>
                 <option value="blue">Blue</option>
                 <option value="green">Green</option>
@@ -68,9 +70,43 @@
                 <option value="yellow">Yellow</option>
             </select>
 
+            <label class="routeDetailsLabel" for="starRating">Rating</label>
+            <form id="starRating" name="starRating" class="rating">
+                <label>
+                    <input type="radio" name="stars" value="1" />
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="2" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="3" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>   
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="4" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="5" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+            </form>
+
             <label class="routeDetailsLabel" for='routeSent'>Sent</label>
-            <input type="checkbox" id="sentSwitch" />
-            <label for="sentSwitch" class="sentLabel">Toggle</label>
+                <input type="checkbox" id="sentSwitch" />
+                <label for="sentSwitch" class="sentLabel">Toggle</label>
 
   
 

@@ -30,6 +30,10 @@ router.get('/add-routes', (req,res) => {
     res.render('users/add-routes')
 })
 
+router.post('/add-routes', (req,res) => {
+    
+})
+
 
 // ---------- DATA PAGE ROUTES -------------
 

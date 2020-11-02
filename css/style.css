@@ -495,6 +495,9 @@ body {
           background: #3c3c3c;
           padding-left: 5px;
           padding-right: 5px;
+          overflow-y: auto;
+          height: 400px;
+
       }
 
       .infoContentText {
@@ -517,5 +520,48 @@ body {
           font-weight: 400;
           margin-top: 10px;
           margin-bottom: 10px;
+      }
+
+      .imageCont {
+          display: flex;
+          justify-content: center;
+      }
+
+      #styleImage {
+          height:300px;
+          width: 200px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #gradeImage {
+        margin-bottom: 50px;
+        margin-top: 10px;
+        border: 3px solid #6bbb57;
+      }
+
+      #gearImage {
+          width: 400px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #chalkImage {
+          height: 150px;
+          width: 70%;
+          border: 3px solid #6bbb57;
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+
+      #shoesImage {
+        border: 3px solid #6bbb57;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 70%;
+      }
+
+      #shoeDetails {
+          margin-bottom: 150px;
       }
 }

@@ -1,10 +1,26 @@
 const typesOfGymClimbing = document.getElementById('typesOfGymClimbing')
-const infoContents = document.getElementById('infoContents')
-
+const infoContentsStyle = document.getElementById('infoContentsStyle')
 
 typesOfGymClimbing.addEventListener('click', () => {
-    displayContents(infoContents)
+    displayContents(infoContentsStyle)
 })
+
+const routeGrades = document.getElementById('routeGrades')
+const infoContentsGrade = document.getElementById('infoContentsGrade')
+
+routeGrades.addEventListener('click', () => {
+    displayContents(infoContentsGrade)
+})
+
+const gear = document.getElementById("gear")
+const infoContentsGear = document.getElementById('infoContentsGear')
+
+gear.addEventListener('click', () => {
+    displayContents(infoContentsGear)
+})
+
+
+
 
 function displayContents(contentsContainer) {
     if (contentsContainer.className === 'infoContents hidden') {

@@ -3,7 +3,8 @@ const express = require('express')
 const router = express.Router() //express-router
 const { v4: uuidv4 } = require('uuid'); // for unique ids
 const models = require('../models') //sequelize models //go up 2-routes to find folder
-const session = require('express-session')
+const session = require('express-session');
+const { route } = require('.');
 
 //---------- ADD-CLIMB PAGE ROUTES -----------
 router.get('/logout', (req,res) => {
@@ -85,8 +86,21 @@ router.post('/end-session', (req,res) => {
 
 // ---------- DATA PAGE ROUTES -------------
 
-router.get('/data', (req,res) => {
-    res.render('users/data')
+router.get('/data', async(req,res) => {
+    let user = req.session.user.userId
+    let routesArray = []
+
+    let routes = await models.UserRoute.findAll({
+            where:{
+            userId: user
+            }
+        })
+    for (let i = 0; i <routes.length; i++){
+        routesArray.push(routes[i].dataValues)
+    }
+    console.log(routesArray)
+
+    res.render('users/data', {userRoutes:routesArray})
 })
 
 // export to app.js

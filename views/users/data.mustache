@@ -9,9 +9,34 @@
     </head>
     
     <body>
-        {{> navHeader}}
-        <div id = "content">
-            Content
+        <div id = "mainCont">
+            <section id = "data-title">All Routes Stats</section>
+                {{# userRoutes}}
+            <div class = "data-item">
+            <section class = "data-header">
+                <div>name: {{name}}</div>
+                <div>date: 10/19/2020</div>
+            </section>
+                
+            <section class = "data-information">
+                <section id = "data-grade">
+                    <div>{{grade}}</div>
+                    <label id = "grade-label">Grade</label>
+                </section>
+                <section id = "data-categories">
+                    <div>color: {{color}}</div>
+                    <div>rating: {{rating}}</div>
+                    <div>sent: {{sent}}</div>
+                </section>
+                <section id = "data-time">
+                    <div id = "time-value">1:35</div>
+                    <label id = "time-label">Time</label>
+                </section>
+
+            </section>
+            </div>
+
+                {{/ userRoutes}}
         </div>
         {{> navbar}}
 

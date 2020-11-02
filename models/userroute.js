@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   UserRoute.init({
+    userId: DataTypes.INTEGER,
     sessionId: DataTypes.INTEGER,
     name: DataTypes.STRING,
     grade: DataTypes.STRING,

@@ -89,5 +89,11 @@ router.get('/data', (req,res) => {
     res.render('users/data')
 })
 
+// ---------- INFO PAGE ROUTES --------------
+
+router.get ('/info', (req,res) => {
+    res.render('users/info')
+})
+
 // export to app.js
 module.exports = router

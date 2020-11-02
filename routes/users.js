@@ -6,6 +6,19 @@ const models = require('../models') //sequelize models //go up 2-routes to find 
 const session = require('express-session')
 
 //---------- ADD-CLIMB PAGE ROUTES -----------
+router.get('/logout', (req,res) => {
+
+    if (req.ression) {
+        req.session.isAuthenticated = false
+        req.session.destroy((error) => {
+            if (error) {
+                next(error)
+            } else {
+                res.redirect('/')
+            }
+        })
+    }
+})
 
 router.get('/add-climb', (req,res) => {
     res.render('users/add-climb')

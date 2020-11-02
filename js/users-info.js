@@ -26,6 +26,13 @@ terminology.addEventListener('click', () => {
     displayContents(infoContentsTerminology)
 })
 
+const holds = document.getElementById('holds')
+const infoContentsHolds = document.getElementById('infoContentsHolds')
+
+holds.addEventListener('click', () => {
+    displayContents(infoContentsHolds)
+})
+
 
 
 

@@ -569,7 +569,17 @@ body {
           margin-bottom: 10px;
       }
 
-      #finalEntry {
+      .finalEntry {
           margin-bottom: 150px;
+      }
+
+      .holdsImg {
+        border: 3px solid #6bbb57;
+        width: 70%;
+      }
+
+      #holdsVideo {
+          border: 3px solid #6bbb57;
+          margin-top: 10px;
       }
 }

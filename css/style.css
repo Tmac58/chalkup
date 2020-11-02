@@ -65,6 +65,12 @@ body {
         border: 2px solid #6bbb57;
         outline: none;
         padding: 5px;
+        transition: 0.2s ease-out;
+    }
+    .signInBtn:focus {
+        background: #6bbb57;
+        color: white;
+        border: 2px solid white;
     }
 
     .userIcon {
@@ -117,17 +123,21 @@ body {
     /*===========================================================*/
 
     #navbar {
+        position: fixed;
+        bottom: 0;
         margin: 0px;
         height: 10vh;
         width: 100vw;
-        background: black;
+        background: rgb(18, 18, 18);
     }
 
     #nav-header{
+        position: fixed;
+        top: 0;
         margin: 0px;
         height: 10vh;
         width: 100vw;
-        background: black;
+        background: rgb(18, 18, 18);
     }
     #content {
         width: 100vw;
@@ -139,8 +149,8 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        color: white;
-        font-size: 2.0rem;
+        color: #6bbb57;
+        font-size: 2.4rem;
         height: inherit;
     }
 
@@ -151,7 +161,7 @@ body {
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: white;
+        color: #6bbb57;
     }
 
     .nav-title {
@@ -211,7 +221,8 @@ body {
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
        #map {
-        height: 100%;
+        height: 90vh;
+        width: 100vw;
       }
       
       /* Optional: Makes the sample page fill the window. */
@@ -290,6 +301,228 @@ body {
   padding: 6px 12px;
 }
 
-#target {
-  width: 345px;
-}
+
+
+    .testMenu {
+        height: 10vh;
+        background: #6bbb57;
+        width: 100%;
+        color: black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .addSessionCont {
+        margin-top: 175px;
+    }
+
+    #addSessionBtn {
+        background: #3c3c3c;
+        color: #6bbb57;
+        outline: none;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 10px solid #6bbb57;
+        font-size: 1.1em;
+    }
+
+    .addRouteCont {
+        margin-top: 90px;
+        width: 100%;
+        display:flex;
+    }
+
+    #addRouteBtnCont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        width: 50px;
+        height: 50px;
+        background: rgb(18, 18, 18);
+        color: #6bbb57;
+    }
+
+    #addRouteLabelCont {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: #3c3c3c;
+        padding-right: 40px;
+        font-size: 1.2em;
+    }
+
+    #routeCont {
+        display: none; /*CHANGE TO NONE*/
+        flex-direction: column;
+        align-items: center;
+        height: 115vh;
+        width: 95%;
+        margin-top: 10px;
+        background: #3c3c3c;
+        color: #6bbb57;
+    }
+
+    #addRouteForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #routeDetailsTitle{
+        color: #6bbb57;
+        margin: 10px;
+        border-bottom: 2px solid #6bbb57
+    }
+
+    .routeDetailsLabel {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    #routeNameInput {
+        width: 90%;
+        text-align: center;
+    }
+
+    #routeNameInput::placeholder {
+        color: black;
+    }
+
+    #routeGrade {
+        width: 35%;
+    }
+
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    .sentLabel {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 90px;
+        height: 40px;
+        background: grey;
+        display: block;
+        border-radius: 40px;
+        position: relative;
+        outline:none;
+    }
+    .sentLabel:focus {
+        outline:none !important;
+    }
+    #sentSwitch {
+        outline:none !important;
+    }
+    
+    .sentLabel:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 30px;
+        transition: 0.3s;
+        outline:none;
+    }
+    
+    input:checked + label {
+        background: #6bbb57;
+        outline:none;
+    }
+    
+    input:checked + .sentLabel:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+        outline:none;
+    }
+    
+    .sentLabel:active:after {
+        width: 40px;
+        outline:none;
+    }
+
+    .rating {
+        display: inline-block;
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        font-size: 50px;
+      }
+      
+      .rating label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        cursor: pointer;
+      }
+      
+      .rating label:last-child {
+        position: static;
+      }
+      
+      .rating label:nth-child(1) {
+        z-index: 5;
+      }
+      
+      .rating label:nth-child(2) {
+        z-index: 4;
+      }
+      
+      .rating label:nth-child(3) {
+        z-index: 3;
+      }
+      
+      .rating label:nth-child(4) {
+        z-index: 2;
+      }
+      
+      .rating label:nth-child(5) {
+        z-index: 1;
+      }
+      
+      .rating label input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      
+      .rating label .icon {
+        float: left;
+        color: transparent;
+      }
+      
+      .rating label:last-child .icon {
+        color: #000;
+      }
+      
+      .rating:not(:hover) label input:checked ~ .icon,
+      .rating:hover label:hover input ~ .icon {
+        color: #ffcc00;
+      }
+      
+      .rating label input:focus:not(:checked) ~ .icon:last-child {
+        color: #000;
+        text-shadow: 0 0 5px #ffcc00;
+      }
+    
+      .routeInputText {
+          font-size: 1.2em;
+          border-radius: 16px 0 16px 0;
+      }
+
+      #submitRouteBtn {
+          margin-top: 50px;
+          padding: 10px;
+      }
+    

@@ -9,10 +9,25 @@
     <body>
 
     <div class="mainCont">
-       
+
+       {{> navHeader}}
+
+        <div class="addSessionCont">
+            <form action='/users/create-session' method="POST">
+                <div id="addSessionBtnCont">
+                    <button id="addSessionBtn" type='submit'>
+                        <h1>Start</h1>
+                        <h1>Session</h1>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        {{> navbar}}
     </div>
 
+    
 
-        {{> footer}}    
+        <script src='../js/users.js'></script>
     </body>
 </html>

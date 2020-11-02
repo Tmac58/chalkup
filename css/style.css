@@ -258,6 +258,16 @@ body {
         color: #6bbb57;
     }
 
+    #endSessionBtn {
+        color: red;
+        border: 2px solid red;
+    }
+    #endSessionBtn:focus {
+        background: rgb(255, 123, 123);
+        color: rgb(160, 0, 0);
+        border: 2px solid rgb(160, 0, 0);
+    }
+
     #addRouteLabelCont {
         width: 100%;
         display: flex;

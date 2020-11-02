@@ -64,6 +64,11 @@ router.post('/add-routes', async (req,res) => {
     }
 })
 
+router.post('/end-session', (req,res) => {
+
+    res.redirect('/users/data')
+})
+
 
 // ---------- DATA PAGE ROUTES -------------
 

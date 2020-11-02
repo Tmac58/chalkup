@@ -28,6 +28,7 @@ function init() {
       markers = [];
       // For each place, get the icon, name and location.
       const bounds = new google.maps.LatLngBounds();
+      console.log(bounds)
       places.forEach((place) => {
         if (!place.geometry) {
           console.log("Returned place contains no geometry");
@@ -49,6 +50,7 @@ function init() {
             position: place.geometry.location,
           })
         );
+        console.log(markers[0])
   
         if (place.geometry.viewport) {
           // Only geocodes have viewport.

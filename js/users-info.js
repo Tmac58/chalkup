@@ -19,6 +19,13 @@ gear.addEventListener('click', () => {
     displayContents(infoContentsGear)
 })
 
+const terminology = document.getElementById("terminology")
+const infoContentsTerminology = document.getElementById("infoContentsTerminology")
+
+terminology.addEventListener('click', () => {
+    displayContents(infoContentsTerminology)
+})
+
 
 
 

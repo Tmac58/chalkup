@@ -578,7 +578,7 @@ body {
         width: 70%;
       }
 
-      #holdsVideo {
+      .video {
           border: 3px solid #6bbb57;
           margin-top: 10px;
       }

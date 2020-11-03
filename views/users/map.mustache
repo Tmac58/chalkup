@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> header}}
+    <title>Places Search Box</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1mGkCAUSHtMZ6pRCWg8VoVhkj5ROb1c&callback=init&libraries=places&v=weekly"
+      defer
+    ></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div class="mainCont">
+        {{> navHeader}}
+        <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+      />
+      <div id="map"></div>
+      
+      {{> navbar}}
+      </div>
+    
+    <script src= "../js/maps.js"></script>
+  </body>
+</html>
+      

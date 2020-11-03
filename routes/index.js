@@ -53,6 +53,9 @@ router.post('/register', async(req,res) => {
             }
         })
     }
+    else {
+        res.render('register', {message: "User already exists"})
+    }
 })
 
 router.get('/login', (req,res) => {

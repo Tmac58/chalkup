@@ -84,7 +84,11 @@ router.post('/end-session', (req,res) => {
 
     res.redirect('/users/data')
 })
+// --------------MAP ROUTES ---------------
 
+router.get('/map', (req, res) => {
+    res.render('users/map')
+})
 
 // ---------- DATA PAGE ROUTES -------------
 
@@ -103,6 +107,19 @@ router.get('/data', async(req,res) => {
     console.log(routesArray)
 
     res.render('users/data', {userRoutes:routesArray})
+})
+
+router.get('/data/edit/route/:routeId', async(req, res) => {
+    let user = req.session.user.userId
+    let routeId = req.params.routeId
+    
+    const route = await models.UserRoute.findOne({
+        where: {
+        userId : user,
+        routeId: routeId
+        }
+    })
+    console.log(route)
 })
 
 // ---------- INFO PAGE ROUTES --------------

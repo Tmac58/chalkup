@@ -10,12 +10,30 @@
     
     <body>
         <div id = "mainCont">
-            <section id = "data-title">All Routes Stats</section>
+            <label id = "data-monthly-stats" >This month's stats</label>
+            <section id = "data-averages">
+                <div class = "monthly-stats-container">
+                    <div class = "monthly-stats-value">5x</div>
+                    <label>Sessions</label>
+                </div>
+
+                <div class = "monthly-stats-container">
+                    <div class = "monthly-stats-value">1:40</div>
+                    <label>Time</label>
+                </div>
+
+                <div class = "monthly-stats-container">
+                    <div class = "monthly-stats-value">5</div>
+                    <label>Avg Grade</label>
+                </div>
+
+            </section>
+            <section class = "data-title">All Routes Stats</section>
                 {{# userRoutes}}
             <div class = "data-item">
             <section class = "data-header">
-                <div>name: {{name}}</div>
-                <div>date: 10/19/2020</div>
+                <div>{{name}}</div>
+                <div>10/19/2020</div>
             </section>
                 
             <section class = "data-information">

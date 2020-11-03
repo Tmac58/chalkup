@@ -453,12 +453,42 @@ body {
 
 /*==================DATA================*/
 
-#data-title{
+.data-title{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.75rem;
     width: 100%;
     border-bottom: 2px solid white;
+}
+
+#data-monthly-stats{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.monthly-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 1rem;
+    font-weight: 700;
+    margin-bottom: 0rem;
+}
+.monthly-stats-value{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #6bbb57;
+}
+#data-averages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .data-item{
@@ -466,17 +496,25 @@ body {
 }
 
 .data-header{
-    font-size: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
     color: white;
     padding: 0.5rem;
+    padding-bottom: 0rem;
 
 }
 
 .data-information{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    font-weight: 500;
     justify-content: space-between;
-    color: white
+    color: white;
+    margin-bottom: 0.5rem;
 }
 
 #data-grade {
@@ -485,7 +523,7 @@ body {
     align-items: center;
     margin-left: 1rem;
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: 2rem;
 
 }
 #grade-label {
@@ -497,7 +535,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     font-weight: 700;
     margin-left: 5rem;
     font-size: 1.75rem;
@@ -506,5 +544,11 @@ body {
 #time-label {
     color: #6bbb57;
     font-size: 1.2rem;
+}
+
+#data-averages {
+    color: white;
+    display: flex;
+    flex-direction: row;
 }
 

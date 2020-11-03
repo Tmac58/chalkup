@@ -8,6 +8,7 @@ body {
 @media (max-width: 425px) {
     body {
         background: #282828;
+        margin: 0
     }
 
     #goBackBtn {
@@ -27,6 +28,12 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 12vh;
+        margin-top:12vh;
+    }
+    #mainCont {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 12vh;
         margin-top:12vh;
     }
@@ -123,22 +130,21 @@ body {
     }
 
     /*===========================================================*/
-
     #navbar {
         overflow: hidden;
-        position: sticky;
+        position: fixed;
         bottom: 0;
         height: 12vh;
-        width: 100%;
+        width: 100vw;
         background: rgb(18, 18, 18);
     }
 
     #nav-header{
         overflow: hidden;
-        position: sticky;
+        position: fixed;
         top: 0;
         height: 12vh;
-        width: 100%;
+        width: 100vw;
         background: rgb(18, 18, 18);
     }
     #content {
@@ -467,7 +473,7 @@ body {
     color: white;
     font-size: 1.5rem;
     padding: 0.75rem;
-    width: 100%;
+    width: 100vw;
 }
 
 .monthly-stats-container {

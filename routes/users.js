@@ -28,7 +28,6 @@ router.get('/add-climb', (req, res) => {
 router.post('/create-session', async (req, res) => {
     let userId = req.session.user.userId
 
-
     let climbSession = models.UserSession.build({
         userId: userId
     })
@@ -61,8 +60,6 @@ router.post('/add-routes', async (req, res) => {
         routeSent = false
     }
 
-    console.log(attempts)
-
     let route = models.UserRoute.build({
         name: routeName,
         grade: routeGrade,
@@ -80,7 +77,19 @@ router.post('/add-routes', async (req, res) => {
     }
 })
 
-router.post('/end-session', (req, res) => {
+router.post('/end-session', async (req,res) => {
+    let totalSeconds = parseInt(req.body.totalSecondsValue)
+    let userId = req.session.user.userId
+    let sessionId = req.session.user.sessionId
+
+    let result = await models.UserSession.update({
+        userId: userId,
+        totalSeconds: totalSeconds
+    },{
+        where: {
+            id: sessionId
+        }
+    })
 
     res.redirect('/users/data')
 })
@@ -110,14 +119,8 @@ router.get('/data', async (req, res) => {
     res.render('users/data', { userRoutes: routesArray })
 })
 
-router.get('/edit/session/:sessionId/route/:routeId', async (req, res) => {
-    let user = req.session.user.userId
-    console.log(user)
-    let sessionId = req.params.sessionId
-    console.log(sessionId)
+router.get('/edit/route/:routeId', async (req, res) => {
     let routeId = req.params.routeId
-    console.log(routeId)
-
     const userRoutes = await models.UserRoute.findOne({
         where: {
             id: routeId
@@ -129,8 +132,6 @@ router.get('/edit/session/:sessionId/route/:routeId', async (req, res) => {
 })
 
 router.post('/edit-routes', async (req, res) => {
-    let userId = req.session.user.userId
-    let sessionId = req.session.user.sessionId
     let routeId = req.body.routeId
     let routeName = req.body.routeName
     let routeGrade = req.body.routeGrade
@@ -151,8 +152,6 @@ router.post('/edit-routes', async (req, res) => {
         rating: starRating,
         attempts: attempts,
         sent: routeSent,
-        sessionId: sessionId,
-        userId: userId
     },
         {
             where: {
@@ -161,12 +160,8 @@ router.post('/edit-routes', async (req, res) => {
         })
 
 
-
-    let persistedRoute = await updatedRoute.save()
-    if (persistedRoute != null) {
-        res.redirect('/users/add-routes')
-    }
-})
+        res.redirect('/users/data')
+    })
 
 router.post('/delete-route', (req, res) => {
     const routeId = req.body.id

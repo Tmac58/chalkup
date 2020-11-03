@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     gymId: DataTypes.INTEGER,
     climbs: DataTypes.INTEGER,
-    time: DataTypes.INTEGER
+    time: DataTypes.INTEGER,
+    totalSeconds: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'UserSession',

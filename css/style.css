@@ -31,11 +31,20 @@ body {
         margin-bottom: 12vh;
         margin-top:12vh;
     }
+
     #mainCont {
         display: flex;
         flex-direction: column;
         margin-bottom: 12vh;
         margin-top:12vh;
+    }
+
+    #homepageCont {
+        margin: 0;
+    }
+
+    #registerCont {
+        margin: 0;
     }
 
     .logoCont {
@@ -124,6 +133,11 @@ body {
     #logInBtn {
         margin-top: 40px;
     }
+    #logInBtn:focus {
+        background: #6bbb57 !important;
+        color: white !important;
+        border: 2px solid white !important;
+    }
 
     ::placeholder {
         color: white;
@@ -186,6 +200,8 @@ body {
         color: #6bbb57;
         font-size:  2rem;
         margin-top: 0px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
     }
 
     .logoIconCont-header {
@@ -200,6 +216,7 @@ body {
     .logoIcon-header {
         height: 2.5rem;
         margin-top: 0px;
+        padding-bottom: 10px;
     }
 
     .logoTitle-header{
@@ -235,7 +252,7 @@ body {
     }
 
     .addSessionCont {
-        margin-top: 175px;
+        margin-top: 130px;
     }
 
     #addSessionBtn {
@@ -248,9 +265,31 @@ body {
         border: 10px solid #6bbb57;
         font-size: 1.1em;
     }
+    #addSessionBtn:focus {
+        background: #6bbb57;
+        color: white;
+        border: 10px solid white;
+    }
+
+    #sessionTimerCont {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        padding: 20px;
+        border: 5px solid #6bbb57;
+        background: #3c3c3c;
+        color: white;
+        width: 355px;
+    }
+
+    #sessionTimeDisplay {
+        font-size: 5em;
+    }
 
     .addRouteCont {
-        margin-top: 90px;
+        margin-top: 10px;
         width: 100%;
         display:flex;
     }
@@ -497,8 +536,12 @@ body {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin-top: 80px;
+          margin-top: 10px;
           width: 100%;
+      }
+
+      #infoTitleCont {
+          margin-top: 0;
       }
 
       #infoTitle {

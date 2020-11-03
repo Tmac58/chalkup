@@ -38,7 +38,7 @@
                     <div>10/19/2020</div>
                 </div>
                 <section class = "data-edit-delete">
-                    <a href = "/users/edit/session/{{sessionId}}/route/{{id}}">
+                    <a href = "/users/edit/route/{{id}}">
                         <button class = "route-delete-edit"><i class="fas fa-edit">Edit</i></button>
                     </a>
                     <form method = "POST" action = "/users/delete-route">
@@ -58,7 +58,7 @@
                 <section class = "data-categories">
                     <div>color: {{color}}</div>
                     <div>rating: {{rating}}</div>
-                    <div>attempts: 3</div>
+                    <div>attempts: {{attempts}}</div>
                     <div>sent: {{sent}}</div>
                 </section>
                 <section id = "data-time">

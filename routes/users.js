@@ -87,7 +87,8 @@ router.post('/end-session', (req,res) => {
 // --------------MAP ROUTES ---------------
 
 router.get('/map', (req, res) => {
-    res.render('users/map')
+
+    res.render('/users/map')
 })
 
 // ---------- DATA PAGE ROUTES -------------
@@ -109,17 +110,78 @@ router.get('/data', async(req,res) => {
     res.render('users/data', {userRoutes:routesArray})
 })
 
-router.get('/data/edit/route/:routeId', async(req, res) => {
+router.get('/edit/session/:sessionId/route/:routeId', async(req, res) => {
     let user = req.session.user.userId
+    console.log(user)
+    let sessionId = req.params.sessionId
+    console.log(sessionId)
     let routeId = req.params.routeId
+    console.log(routeId)
     
-    const route = await models.UserRoute.findOne({
+    const userRoutes = await models.UserRoute.findOne({
         where: {
         userId : user,
-        routeId: routeId
+        sessionId:sessionId,
+        id: routeId
         }
     })
-    console.log(route)
+    const routeDetails = userRoutes.dataValues
+    console.log(routeDetails)
+    res.render('users/edit-route', routeDetails)
+})
+
+router.post('/edit-routes', async (req, res) => {
+    let userId = req.session.user.userId
+    let sessionId = req.session.user.sessionId
+    let routeId = req.body.id
+    let routeName = req.body.routeName
+    let routeGrade = req.body.routeGrade
+    let routeColor = req.body.routeColor
+    let starRating = req.body.stars
+    let attempts = req.body.attempts
+    let routeSent = req.body.routeSent
+    if (routeSent) {
+        routeSent = true
+    } else {
+        routeSent = false
+    }
+
+    let updatedRoute = await models.UserRoute.update({
+        where: {
+        userId : userId,
+        sessionId:sessionId,
+        id: routeId
+        },
+        name: routeName,
+        grade: routeGrade,
+        color: routeColor,
+        rating: starRating,
+        attempts: attempts,
+        sent: routeSent,
+        sessionId: sessionId,
+        userId: userId
+
+    })
+
+    
+
+    let persistedRoute = await updatedRoute.save()
+    if (persistedRoute != null) {
+        res.redirect('/users/add-routes')
+    }
+})
+
+router.post('/delete-route', (req, res) => {
+    const routeId = req.body.id
+
+
+    models.UserRoute.destroy({
+        where:{
+            id:routeId
+        }
+    })
+    .then(result => console.log(result))
+    res.redirect('/users/data')
 })
 
 // ---------- INFO PAGE ROUTES --------------

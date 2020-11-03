@@ -36,13 +36,13 @@
                 <div>{{name}}</div>
                 <div>10/19/2020</div>
                 <section>
-                    <a href = "/data/edit/route/{{id}}">
+                    <a href = "/users/edit/session/{{sessionId}}/route/{{id}}">
                         <buttons>Edit</buttons>
                     </a>
-                    <form method = "POST" action = "/delete-route">
+                    <form method = "POST" action = "/users/delete-route">
                         <input type = "hidden" value={{id}} name = "id">
                         <input type = "hidden" value={{session_Id}} name = "sessionid">
-                        <button class = "delete-route- button">Delete</button>                        
+                        <button class = "delete-route-button">Delete</button>                        
                     </form>
                     
                 </section>

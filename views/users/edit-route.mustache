@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        {{> header}}
+        <title>CHALK-UP</title>
+    </head>
+
+    <body>
+
+    <div class="mainCont">
+
+        {{> navHeader}}
+
+        <div id="editrouteCont">
+            <h3 id='routeDetailsTitle'>Edit Route Details</h3>
+
+            <form id="addRouteForm" action="/users/edit-routes" method="POST">
+
+                <label class="routeDetailsLabel" for="routeName">Name</label>
+                <input class="routeInputText" value = {{name}} type="text" name='routeName' id='routeNameInput' placeholder='Route Name' style="padding: 5px 10px;">
+                <input class = "routeId" type = "hidden" name = "routeId" value = {{id}}>
+                <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
+                <select class='routeInputText routeGrade' id="routeGrade" name="routeGrade" style="padding: 5px 10px;" value = {{grade}}>
+                    <option value="5.5">5.5</option>
+                    <option value="5.6">5.6</option>
+                    <option value="5.7">5.7</option>
+                    <option value="5.8">5.8</option>
+                    <option value="5.9">5.9</option>
+                    <option value="5.10-">5.10-</option>
+                    <option value="5.10">5.10</option>
+                    <option value="5.10+">5.10+</option>
+                    <option value="5.11-">5.11-</option>
+                    <option value="5.11">5.11</option>
+                    <option value="5.11+">5.11+</option>
+                    <option value="5.12-">5.12-</option>
+                    <option value="5.12">5.12</option>
+                    <option value="5.12+">5.12+</option>
+                    <option value="5.13-">5.13-</option>
+                    <option value="5.13">5.13</option>
+                    <option value="5.13+">5.13+</option>
+                    <option value="5.14-">5.14-</option>
+                    <option value="5.14">5.14</option>
+                    <option value="5.14">5.14+</option>                
+                </select>
+
+                <label class="routeDetailsLabel" for='routeColor'>Color</label>
+                <select class="routeInputText" name='routeColor' id="routeColor" style="padding: 5px 10px;" value = {{color}}>
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="grey">Grey</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+
+                <label class="routeDetailsLabel" for='routeColor'>Attempts</label>
+                <div id="incrementCont">
+                    <i id="minusAttempt"class="far fa-arrow-alt-circle-down incrementBtn"></i>
+                    <input class="routeInputText" type="text" name="attempts" id="attemptsInput" value={{attempts}}>
+                    <i id="plusAttempt" class="far fa-arrow-alt-circle-up incrementBtn"></i>
+                </div>
+
+
+                
+
+                <label class="routeDetailsLabel" for='routeSent'>Sent</label>
+                    <input type="checkbox" id="sentSwitch" name="routeSent"  />
+                    <label for="sentSwitch" class="sentLabel" value = {{sent}}>Toggle</label>
+
+                <label class="routeDetailsLabel" for="starRating">Rating</label>
+                <div type="radio" id="starRating" name="starRating" class="rating" value = {{rating}}>
+                    <label>
+                        <input type="radio" name="stars" value="1" />
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="stars" value="2" />
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="stars" value="3" />
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>   
+                    </label>
+                    <label>
+                        <input type="radio" name="stars" value="4" />
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="stars" value="5" />
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                        <span class="icon">★</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="signInBtn" id="submitRouteBtn">Add</button>
+
+            </form> 
+        
+        </div>
+
+    {{> navbar}}
+    </div>
+
+        <script src='../js/users-routes.js'></script>
+    </body>
+</html>

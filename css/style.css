@@ -27,6 +27,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 12vh;
+        margin-top:12vh;
     }
 
     .logoCont {
@@ -123,20 +125,20 @@ body {
     /*===========================================================*/
 
     #navbar {
-        position: fixed;
+        overflow: hidden;
+        position: sticky;
         bottom: 0;
-        margin: 0px;
-        height: 15vh;
-        width: 100vw;
+        height: 12vh;
+        width: 100%;
         background: rgb(18, 18, 18);
     }
 
     #nav-header{
-        position: fixed;
+        overflow: hidden;
+        position: sticky;
         top: 0;
-        margin: 0px;
-        height: 82px;
-        width: 100vw;
+        height: 12vh;
+        width: 100%;
         background: rgb(18, 18, 18);
     }
     #content {
@@ -457,7 +459,7 @@ body {
     color: white;
     font-size: 1.5rem;
     padding: 0.75rem;
-    width: 100%;
+    width: 100vw;
     border-bottom: 2px solid white;
 }
 
@@ -474,21 +476,25 @@ body {
     align-content: center;
     justify-content: center;
     margin: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 0rem;
 }
 .monthly-stats-value{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #6bbb57;
+}
+.stats-title{
+    text-align: center;
+    font-weight: 700;
 }
 #data-averages {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .data-item{
@@ -537,7 +543,7 @@ body {
     align-items: center;
     margin-right: 1.5rem;
     font-weight: 700;
-    margin-left: 5rem;
+    margin-left: 4rem;
     font-size: 1.75rem;
 }
 

@@ -9,22 +9,23 @@
     </head>
     
     <body>
+        {{> navHeader}}
         <div id = "mainCont">
             <label id = "data-monthly-stats" >This month's stats</label>
             <section id = "data-averages">
                 <div class = "monthly-stats-container">
                     <div class = "monthly-stats-value">5x</div>
-                    <label>Sessions</label>
+                    <label class = "stats-title">Sessions</label>
                 </div>
 
                 <div class = "monthly-stats-container">
                     <div class = "monthly-stats-value">1:40</div>
-                    <label>Time</label>
+                    <label class = "stats-title">Time</label>
                 </div>
 
                 <div class = "monthly-stats-container">
                     <div class = "monthly-stats-value">5</div>
-                    <label>Avg Grade</label>
+                    <label class = "stats-title">Avg Grade</label>
                 </div>
 
             </section>
@@ -41,9 +42,10 @@
                     <div>{{grade}}</div>
                     <label id = "grade-label">Grade</label>
                 </section>
-                <section id = "data-categories">
+                <section class = "data-categories">
                     <div>color: {{color}}</div>
                     <div>rating: {{rating}}</div>
+                    <div>attempts: 3</div>
                     <div>sent: {{sent}}</div>
                 </section>
                 <section id = "data-time">

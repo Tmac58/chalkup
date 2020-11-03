@@ -30,6 +30,7 @@ body {
         align-items: center;
         margin-bottom: 12vh;
         margin-top:12vh;
+
     }
 
     #mainCont {
@@ -560,6 +561,69 @@ body {
 }
 
 /*==================DATA================*/
+#dataPageCont {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------- TOTAL STATS ---------- */
+#totalStatsCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#totalStatsTitle {
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 5px;
+}
+
+.dataRowCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.rowLabel {
+    color: white;
+    font-size: 1.3em;
+    border-bottom: 2px solid white;
+}
+
+.dataRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 3px solid #96ff7b;
+    background: rgb(18, 18, 18);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.dataInputValue {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #6bbb57;
+}
+.dataInputLabel {
+    margin: 0;
+    color: white
+}
+
+#totalSessRoutesCont {
+    display: flex;
+    color: white;
+}
+
+
+
 
 .data-title{
     color: white;

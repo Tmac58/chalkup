@@ -96,6 +96,16 @@ router.get('/map', (req, res) => {
 router.get('/data', async (req, res) => {
     let user = req.session.user.userId
     let routesArray = []
+    let sessionsArray = []
+
+    let sessions = await models.UserSession.findAll({
+        where: {
+            userId: user
+        }
+    })
+    sessions.forEach(session => {
+        sessionsArray.push(session.dataValues)
+    })
 
     let routes = await models.UserRoute.findAll({
         where: {
@@ -105,9 +115,65 @@ router.get('/data', async (req, res) => {
     for (let i = 0; i < routes.length; i++) {
         routesArray.push(routes[i].dataValues)
     }
-    console.log(routesArray)
 
-    res.render('users/data', { userRoutes: routesArray })
+    let timeArray = []
+    let longestTime = -Infinity
+    let shortestTime = Infinity
+    let avgTime = 0
+
+    
+    // add all route times to array
+    routesArray.forEach(route => {
+        let timeSeconds = route.totalSeconds
+        timeArray.push(timeSeconds)
+    })
+    // find longest route time
+    timeArray.forEach(time => {
+        if (time > longestTime) {
+            longestTime = time
+        }
+    })
+    // find shortest route time
+    timeArray.forEach(time => {
+        if (time < shortestTime) {
+            shortestTime = time
+        }
+    })
+    // find average route time
+    function findAvgTime() {
+        let totalTimes = 0
+        timeArray.forEach(time => {
+            totalTimes += time
+        })
+        avgTime =  Math.floor(totalTimes / timeArray.length)
+    }
+    findAvgTime()
+
+    //find time in minutes and seconds
+    function findTimeDisplay(totalSeconds) {
+        let minutes = Math.floor(totalSeconds / 60)
+        let seconds = Math.floor(totalSeconds - minutes * 60)
+        let finalTime = str_pad_left(minutes,'0',2)+':'+str_pad_left(seconds,'0',2)
+
+        return finalTime
+    }
+    // pad time display
+    function str_pad_left(string,pad,length) {
+        return (new Array(length+1).join(pad)+string).slice(-length);
+    }
+
+    let userObject = {
+        totalSessions: sessionsArray.length,
+        totalRoutes: routesArray.length,
+        userRoutes: routesArray,
+        longestTime: findTimeDisplay(longestTime),
+        shortestTime: findTimeDisplay(shortestTime),
+        avgTime: findTimeDisplay(avgTime)
+    }
+
+    console.log(userObject)
+
+    res.render('users/data', userObject)
 })
 
 router.get('/edit/route/:routeId', async (req, res) => {

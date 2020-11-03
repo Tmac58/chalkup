@@ -3,14 +3,71 @@
 
     <head>
         {{> header}}
-        <title>Redpoint</title>
+        <title>Chalk-Up</title>
         <link rel="stylesheet" href="/css/style.css">
 
     </head>
     
     <body>
+
+    <div id="dataPageCont">
+
        {{> navHeader}}
+
         <div id = "mainCont">
+
+            <div id="totalStatsCont">
+                <h1 id="totalStatsTitle">Total Stats</h1>
+
+                <div class="dataRowCont" id="totalSessRoutesCont">
+                    <div class="dataRow" id="totalSessCont">
+                        <h2 class="dataInputValue">{{totalSessions}}</h2>
+                        <h3 class="dataInputLabel">Sessions</h3>
+                    </div>
+                    <div class="dataRow" id="totalRouteCont">
+                        <h2 class="dataInputValue">{{totalRoutes}}</h2>
+                        <h3 class="dataInputLabel">Routes</h3>
+                    </div>
+                </div>
+
+                <label class="rowLabel">Time</label>
+                <div class="dataRowCont" id="totalTimeCont">
+                    <div class="dataRow" id="longestTimeCont">
+                        <h2 class="dataInputValue">{{longestTime}}</h2>
+                        <h3 class="dataInputLabel">Longest</h3>
+                    </div>
+                    <div class="dataRow" id="shortestTimeCont">
+                        <h2 class="dataInputValue">{{shortestTime}}</h2>
+                        <h3 class="dataInputLabel">Shortest</h3>
+                    </div>
+                    <div class="dataRow" id="avgTimeCont">
+                        <h2 class="dataInputValue">{{avgTime}}</h2>
+                        <h3 class="dataInputLabel">Avg</h3>
+                    </div>
+                </div>
+
+                <label class="rowLabel">Route Grade</label>
+                <div class="dataRowCont" id="gradesCont">
+                    <div class="dataRow" id="highestGradeCont">
+                        <h2 class="dataInputValue">5.12+</h2>
+                        <h3 class="dataInputLabel">Highest</h3>
+                    </div>
+                    <div class="dataRow" id="avgGradeCont">
+                        <h2 class="dataInputValue">5.10-</h2>
+                        <h3 class="dataInputLabel">Avg</h3>
+                    </div>
+                </div>
+
+                <label class="rowLabel">Routes Completed</label>
+                <div class="dataRowCont" id="completedCont">
+                    <div class="dataRow" id="percentCont">
+                        <h2 class="dataInputValue">85%</h2>
+                    </div>
+                    
+                </div>
+
+            </div>
+
             <label id = "data-monthly-stats" >This month's stats</label>
             <section id = "data-averages">
                 <div class = "monthly-stats-container">
@@ -71,8 +128,11 @@
 
                 {{/ userRoutes}}
         </div>
+
+
         {{> navbar}}
 
+    </div>
 
 
        <script src='../js/users-data.js'></script>

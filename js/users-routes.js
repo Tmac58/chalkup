@@ -35,7 +35,7 @@ function startTimer() {
     let minutes = 0
     let seconds = 0
     let totalSeconds = 0
-
+ 
     setInterval(timer, 1000)
 
     function timer() {

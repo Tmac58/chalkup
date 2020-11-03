@@ -121,7 +121,6 @@ router.get('/data', async (req, res) => {
     let shortestTime = Infinity
     let avgTime = 0
 
-    
     // add all route times to array
     routesArray.forEach(route => {
         let timeSeconds = route.totalSeconds
@@ -162,16 +161,51 @@ router.get('/data', async (req, res) => {
         return (new Array(length+1).join(pad)+string).slice(-length);
     }
 
+    let gradesArray = []
+    let highestGrade = 0
+    let avgGrade = 0
+    // fill gradesArray
+    routesArray.forEach(route => {
+        gradesArray.push(parseInt(route.grade.slice(2)))
+    })
+
+    // find highestGrade
+    gradesArray.forEach(grade => {
+        if (grade > highestGrade) {
+            highestGrade = grade
+        }
+    })
+
+    // find avgGrade
+    function findAvgGrade(array) {
+        let gradeTotals = 0
+        array.forEach(grade => {
+            gradeTotals += grade
+        })
+        avgGrade = Math.round(gradeTotals / array.length)
+    }
+    findAvgGrade(gradesArray)
+
+    // find percentage sent
+    let sentAmount = 0
+    routesArray.forEach(route => {
+        if (route.sent == true) {
+            sentAmount++
+        }
+    })
+    let percentageSent = Math.round((sentAmount / routesArray.length) * 100)
+
     let userObject = {
         totalSessions: sessionsArray.length,
         totalRoutes: routesArray.length,
         userRoutes: routesArray,
         longestTime: findTimeDisplay(longestTime),
         shortestTime: findTimeDisplay(shortestTime),
-        avgTime: findTimeDisplay(avgTime)
+        avgTime: findTimeDisplay(avgTime),
+        highestGrade: highestGrade,
+        avgGrade: avgGrade,
+        percentageSent: percentageSent
     }
-
-    console.log(userObject)
 
     res.render('users/data', userObject)
 })
@@ -184,7 +218,7 @@ router.get('/edit/route/:routeId', async (req, res) => {
         }
     })
     const routeDetails = userRoutes.dataValues
-    console.log(routeDetails)
+    
     res.render('users/edit-route', routeDetails)
 })
 

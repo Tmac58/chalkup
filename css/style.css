@@ -318,6 +318,7 @@ body {
 
     #routeGrade {
         width: 35%;
+        opacity: 1;
     }
 
     input[type=checkbox]{
@@ -442,6 +443,30 @@ body {
       .routeInputText {
           font-size: 1.2em;
           border-radius: 16px 0 16px 0;
+      }
+
+      #incrementCont {
+          display: flex;
+          align-items: center;
+      }
+
+
+      #attemptsInput {
+          width: 70px;
+          text-align: center;
+      }
+
+      .incrementBtn {
+          color: #6bbb57;
+          background: none;
+          outline: none;
+          font-size: 1.5em;
+          margin-left: 15px;
+          margin-right: 15px;
+          border-radius: 50%;
+      }
+      .incrementBtn:focus {
+          color: #33ff00;
       }
 
       #submitRouteBtn {

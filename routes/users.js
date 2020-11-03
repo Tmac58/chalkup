@@ -78,10 +78,18 @@ router.post('/add-routes', async (req,res) => {
 })
 
 router.post('/end-session', async (req,res) => {
-    let totalSeconds = req.body.totalSecondsValue
+    let totalSeconds = parseInt(req.body.totalSecondsValue)
     let userId = req.session.user.userId
     let sessionId = req.session.user.sessionId
 
+    let result = await models.UserSession.update({
+        userId: userId,
+        totalSeconds: totalSeconds
+    },{
+        where: {
+            id: sessionId
+        }
+    })
 
     res.redirect('/users/data')
 })

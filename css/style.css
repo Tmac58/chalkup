@@ -83,7 +83,6 @@ body {
         border: 2px solid #6bbb57;
         outline: none;
         padding: 5px;
-        transition: 0.2s ease-out;
     }
     .signInBtn:focus {
         background: #6bbb57;
@@ -112,12 +111,9 @@ body {
         border-bottom: 5px solid #6bbb57;
         color: white;
         background: #5b5b5b;
-        opacity: 0.7;
-        transition: 0.2s ease-out;
     }
     .signUpInput:focus {
         border-bottom: 5px solid #33ff00;
-        opacity: 1;
         outline: none;
     }
 
@@ -365,7 +361,6 @@ body {
 
     #routeGrade {
         width: 35%;
-        opacity: 1;
     }
 
     input[type=checkbox]{

@@ -17,7 +17,7 @@
                 <form action='/register' method='POST'>
                     <div class='inputFieldCont'>
                         {{! username contains letters and numbers only }}
-                        <input type="text" name="username" class="signUpInput" id="usernameInput" placeholder="Username" pattern="[A-Za-z0-9]+">
+                        <input type="text" name="username" class="signUpInput" id="usernameInput" autocomplete="off" placeholder="Username" pattern="[A-Za-z0-9]+">
                     </div>
                     <div class='inputFieldCont'>
                         <input type="password" name="password" class="signUpInput " id="passwordInput" placeholder="Password">

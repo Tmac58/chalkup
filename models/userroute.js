@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     color: DataTypes.STRING,
     rating: DataTypes.INTEGER,
     sent: DataTypes.BOOLEAN,
-    time: DataTypes.INTEGER
+    time: DataTypes.INTEGER,
+    totalSeconds: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'UserRoute',

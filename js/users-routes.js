@@ -1,15 +1,16 @@
 const addRouteBtn = document.getElementById('addRouteBtn')
 const routeCont = document.getElementById('routeCont')
+const submitRouteBtn = document.getElementById('submitRouteBtn')
 
 addRouteBtn.addEventListener('click', () => {
     routeCont.style.display = "flex";
+    startTimer()
 })
 
+// ATTEMPTS INPUT BUTTONS
 const plusAttempt = document.getElementById('plusAttempt')
 const minusAttempt = document.getElementById('minusAttempt')
 const attemptsInput = document.getElementById('attemptsInput')
-
-
 
 plusAttempt.addEventListener('click', () => {
     attemptsInputInt = parseInt(attemptsInput.value)
@@ -29,7 +30,7 @@ minusAttempt.addEventListener('click', () => {
 const sessionTimeDisplay = document.getElementById('sessionTimeDisplay')
 const totalSecondsValue = document.getElementById('totalSecondsValue')
 
-window.onload = () => {
+function startTimer() {
     let hours = 0
     let minutes = 0
     let seconds = 0
@@ -46,17 +47,25 @@ window.onload = () => {
         seconds = totalSeconds - (hours * 3600 + minutes * 60)
 
         if (hours == 0) {
-            if (minutes < 10) {
-                if (seconds < 10) {
-                    sessionTimeDisplay.innerHTML = `0${minutes}:0${seconds}`
-                } else {
-                    sessionTimeDisplay.innerHTML = `0${minutes}:${seconds}`
-                }
-            } else {
+            if (minutes < 10 && seconds < 10) {
+                sessionTimeDisplay.innerHTML = `0${minutes}:0${seconds}`
+            } else if (minutes < 10 && seconds >= 10) {
+                sessionTimeDisplay.innerHTML = `0${minutes}:${seconds}`
+            } else if (minutes >= 10 && seconds < 10) {
+                sessionTimeDisplay.innerHTML = `${minutes}:0${seconds}`
+            } else if (minutes >= 10 && seconds >= 10) {
                 sessionTimeDisplay.innerHTML = `${minutes}:${seconds}`
             }
         } else {
-            sessionTimeDisplay.innerHTML = `${hours}:${minutes}:${seconds}`
+            if (minutes < 10 && seconds < 10) {
+                sessionTimeDisplay.innerHTML = `${hours}:0${minutes}:0${seconds}`
+            } else if (minutes < 10 && seconds >= 10) {
+                sessionTimeDisplay.innerHTML = `${hours}:0${minutes}:${seconds}`
+            } else if (minutes >= 10 && seconds < 10) {
+                sessionTimeDisplay.innerHTML = `${hours}:${minutes}:0${seconds}`
+            } else if (minutes >= 10 && seconds >= 10) {
+                sessionTimeDisplay.innerHTML = `${hours}:${minutes}:${seconds}`
+            }
         }
     }
 }

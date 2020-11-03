@@ -21,14 +21,13 @@
                 <i id="addRouteBtn" class="fas fa-plus addRouteBtn"></i>
             </div>
             <div id="addRouteLabelCont">
-                <span id="addRouteLabel">Add Route</span>
+                <span id="addRouteLabel">Start Route</span>
             </div>
 
         </div>
 
         <div id="endSessionCont">
                 <form method="POST" action="/users/end-session">
-                    <input type='hidden' name="totalSecondsValue" id='totalSecondsValue' value='0'>
                     <button type="submit" class="signInBtn" id="endSessionBtn">End Session</button>
                 </form>
         </div>
@@ -39,7 +38,7 @@
             <form id="addRouteForm" action="/users/add-routes" method="POST">
 
                 <label class="routeDetailsLabel" for="routeName">Name</label>
-                <input class="routeInputText" type="text" name='routeName' id='routeNameInput' placeholder='Route Name' style="padding: 5px 10px;">
+                <input class="routeInputText" type="text" name='routeName' id='routeNameInput' placeholder='Route Name' autocomplete="off" style="padding: 5px 10px;">
                 
                 <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
                 <select class='routeInputText routeGrade' id="routeGrade" name="routeGrade" style="padding: 5px 10px;">
@@ -124,7 +123,8 @@
                         <span class="icon">★</span>
                     </label>
                 </div>
-
+                
+                <input type='hidden' name="totalSecondsValue" id='totalSecondsValue' value='0'>
                 <button type="submit" class="signInBtn" id="submitRouteBtn">Add</button>
 
             </form>

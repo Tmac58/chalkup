@@ -45,7 +45,8 @@ router.get('/add-routes', (req, res) => {
     res.render('users/add-routes')
 })
 
-router.post('/add-routes', async (req, res) => {
+router.post('/add-routes', async (req,res) => {
+    let totalSeconds = parseInt(req.body.totalSecondsValue)
     let userId = req.session.user.userId
     let sessionId = req.session.user.sessionId
     let routeName = req.body.routeName
@@ -68,29 +69,19 @@ router.post('/add-routes', async (req, res) => {
         attempts: attempts,
         sent: routeSent,
         sessionId: sessionId,
-        userId: userId
+        userId: userId,
+        totalSeconds: totalSeconds
+        
     })
 
     let persistedRoute = await route.save()
     if (persistedRoute != null) {
+
         res.redirect('/users/add-routes')
     }
 })
 
 router.post('/end-session', async (req,res) => {
-    let totalSeconds = parseInt(req.body.totalSecondsValue)
-    let userId = req.session.user.userId
-    let sessionId = req.session.user.sessionId
-
-    let result = await models.UserSession.update({
-        userId: userId,
-        totalSeconds: totalSeconds
-    },{
-        where: {
-            id: sessionId
-        }
-    })
-
     res.redirect('/users/data')
 })
 // --------------MAP ROUTES ---------------

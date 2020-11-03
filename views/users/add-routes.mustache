@@ -48,15 +48,15 @@
                     <option value="5.10+">5.10+</option>
                     <option value="5.11-">5.11-</option>
                     <option value="5.11">5.11</option>
-                    <option value="5.11-">5.11+</option>
-                    <option value="5.11+">5.12-</option>
-                    <option value="5.12-">5.12</option>
-                    <option value="5.12">5.12+</option>
-                    <option value="5.12+">5.13-</option>
-                    <option value="5.13-">5.13</option>
-                    <option value="5.13">5.13+</option>
-                    <option value="5.13+">5.14-</option>
-                    <option value="5.14-">5.14</option>
+                    <option value="5.11+">5.11+</option>
+                    <option value="5.12-">5.12-</option>
+                    <option value="5.12">5.12</option>
+                    <option value="5.12+">5.12+</option>
+                    <option value="5.13-">5.13-</option>
+                    <option value="5.13">5.13</option>
+                    <option value="5.13+">5.13+</option>
+                    <option value="5.14-">5.14-</option>
+                    <option value="5.14">5.14</option>
                     <option value="5.14">5.14+</option>                
                 </select>
 
@@ -71,6 +71,20 @@
                     <option value="red">Red</option>
                     <option value="yellow">Yellow</option>
                 </select>
+
+                <label class="routeDetailsLabel" for='routeColor'>Attempts</label>
+                <div id="incrementCont">
+                    <i id="minusAttempt"class="far fa-arrow-alt-circle-down incrementBtn"></i>
+                    <input class="routeInputText" type="text" name="attempts" id="attemptsInput" value="1">
+                    <i id="plusAttempt" class="far fa-arrow-alt-circle-up incrementBtn"></i>
+                </div>
+
+
+                
+
+                <label class="routeDetailsLabel" for='routeSent'>Sent</label>
+                    <input type="checkbox" id="sentSwitch" name="routeSent" />
+                    <label for="sentSwitch" class="sentLabel">Toggle</label>
 
                 <label class="routeDetailsLabel" for="starRating">Rating</label>
                 <div type="radio" id="starRating" name="starRating" class="rating">
@@ -106,10 +120,6 @@
                     </label>
                 </div>
 
-                <label class="routeDetailsLabel" for='routeSent'>Sent</label>
-                    <input type="checkbox" id="sentSwitch" name="routeSent" />
-                    <label for="sentSwitch" class="sentLabel">Toggle</label>
-
                 <button type="submit" class="signInBtn" id="submitRouteBtn">Add</button>
 
             </form>
@@ -123,6 +133,6 @@
     {{> navbar}}
     </div>
 
-        <script src='../js/users.js'></script>
+        <script src='../js/users-routes.js'></script>
     </body>
 </html>

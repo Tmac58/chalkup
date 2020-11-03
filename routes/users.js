@@ -53,6 +53,7 @@ router.post('/add-routes', async (req,res) => {
     let routeGrade = req.body.routeGrade
     let routeColor = req.body.routeColor
     let starRating = req.body.stars
+    let attempts = req.body.attempts
     let routeSent = req.body.routeSent
     if (routeSent) {
         routeSent = true
@@ -60,13 +61,14 @@ router.post('/add-routes', async (req,res) => {
         routeSent = false
     }
 
-    console.log(userId, sessionId)
+    console.log(attempts)
 
     let route = models.UserRoute.build({
         name: routeName,
         grade: routeGrade,
         color: routeColor,
         rating: starRating,
+        attempts: attempts,
         sent: routeSent,
         sessionId: sessionId,
         userId: userId
@@ -101,6 +103,12 @@ router.get('/data', async(req,res) => {
     console.log(routesArray)
 
     res.render('users/data', {userRoutes:routesArray})
+})
+
+// ---------- INFO PAGE ROUTES --------------
+
+router.get ('/info', (req,res) => {
+    res.render('users/info')
 })
 
 // export to app.js

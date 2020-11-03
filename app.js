@@ -36,6 +36,7 @@ app.use('/users', authenticate.authenticate, userRoutes) // any route at /users/
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css
 app.use('/icons', express.static('icons')) // icons folder
 app.use('/js', express.static('js')) // client-side JS files
+app.use('/images', express.static('images'))
 
 
 // set up template engine

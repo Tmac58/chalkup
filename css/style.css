@@ -326,6 +326,7 @@ body {
 
     #routeGrade {
         width: 35%;
+        opacity: 1;
     }
 
     input[type=checkbox]{
@@ -452,9 +453,61 @@ body {
           border-radius: 16px 0 16px 0;
       }
 
+      #incrementCont {
+          display: flex;
+          align-items: center;
+      }
+
+
+      #attemptsInput {
+          width: 70px;
+          text-align: center;
+      }
+
+      .incrementBtn {
+          color: #6bbb57;
+          background: none;
+          outline: none;
+          font-size: 1.5em;
+          margin-left: 15px;
+          margin-right: 15px;
+          border-radius: 50%;
+      }
+      .incrementBtn:focus {
+          color: #33ff00;
+      }
+
       #submitRouteBtn {
           margin-top: 50px;
           padding: 10px;
+      }
+
+      /* ------ INFO PAGE -------- */
+      .infoCont {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 80px;
+          width: 100%;
+      }
+
+      #infoTitle {
+          color: #6bbb57;
+          border-bottom: 1px solid #6bbb57;
+      }
+
+      .typesCont {
+          background: #121212;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .infoDetailTitle {
+          color: #6bbb57;
+          padding-left: 10px;
       }
     
 }
@@ -563,4 +616,110 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+      .moreInfo {
+          color: #6bbb57;
+          padding-right: 10px;
+          font-size: 1.3em;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      .shown {
+          display: block;
+      }
+
+      .infoContents {        
+          background: #3c3c3c;
+          padding-left: 5px;
+          padding-right: 5px;
+          overflow-y: auto;
+          height: 400px;
+
+      }
+
+      .infoContentText {
+          padding-left: 10px;
+      }
+
+      .infoContentsTextTitle {
+          color: white;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-bottom: 1px solid white;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .infoContentsTextDetail {
+          color: white;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-weight: 400;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .imageCont {
+          display: flex;
+          justify-content: center;
+      }
+
+      #styleImage {
+          height:300px;
+          width: 200px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #gradeImage {
+        margin-bottom: 50px;
+        margin-top: 10px;
+        border: 3px solid #6bbb57;
+      }
+
+      #gearImage {
+          width: 400px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #chalkImage {
+          height: 150px;
+          width: 70%;
+          border: 3px solid #6bbb57;
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+
+      #shoesImage {
+        border: 3px solid #6bbb57;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 70%;
+      }
+
+      #shoeDetails {
+          margin-bottom: 150px;
+      }
+
+      .terminologyEntry {
+          margin-bottom: 10px;
+      }
+
+      .finalEntry {
+          margin-bottom: 150px;
+      }
+
+      .holdsImg {
+        border: 3px solid #6bbb57;
+        width: 70%;
+      }
+
+      .video {
+          border: 3px solid #6bbb57;
+          margin-top: 10px;
+      }
 

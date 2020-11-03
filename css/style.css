@@ -578,7 +578,11 @@ body {
     color: white;
     padding: 0.5rem;
     padding-bottom: 0rem;
+}
 
+.data-name-data{
+    display: flex;
+    flex-direction: column;
 }
 
 .data-information{
@@ -622,6 +626,18 @@ body {
 
 #data-averages {
     color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.route-delete-edit{
+    font-size: 1rem;
+    color: white;
+    border:none;
+    background: transparent;
+}
+
+.data-edit-delete{
     display: flex;
     flex-direction: row;
 }

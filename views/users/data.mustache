@@ -33,16 +33,18 @@
                 {{# userRoutes}}
             <div class = "data-item">
             <section class = "data-header">
-                <div>{{name}}</div>
-                <div>10/19/2020</div>
-                <section>
+                <div class = "data-name-date">
+                    <div>{{name}}</div>
+                    <div>10/19/2020</div>
+                </div>
+                <section class = "data-edit-delete">
                     <a href = "/users/edit/session/{{sessionId}}/route/{{id}}">
-                        <buttons>Edit</buttons>
+                        <button class = "route-delete-edit"><i class="fas fa-edit">Edit</i></button>
                     </a>
                     <form method = "POST" action = "/users/delete-route">
                         <input type = "hidden" value={{id}} name = "id">
                         <input type = "hidden" value={{session_Id}} name = "sessionid">
-                        <button class = "delete-route-button">Delete</button>                        
+                        <button class = "route-delete-edit"><i class="fas fa-trash"></i></button>    
                     </form>
                     
                 </section>

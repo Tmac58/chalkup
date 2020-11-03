@@ -7,7 +7,7 @@ const session = require('express-session');
 const { route } = require('.');
 
 //---------- ADD-CLIMB PAGE ROUTES -----------
-router.get('/logout', (req,res) => {
+router.get('/logout', (req, res) => {
 
     if (req.ression) {
         req.session.isAuthenticated = false
@@ -21,11 +21,11 @@ router.get('/logout', (req,res) => {
     }
 })
 
-router.get('/add-climb', (req,res) => {
+router.get('/add-climb', (req, res) => {
     res.render('users/add-climb')
 })
 
-router.post('/create-session', async (req,res) => {
+router.post('/create-session', async (req, res) => {
     let userId = req.session.user.userId
 
 
@@ -38,15 +38,15 @@ router.post('/create-session', async (req,res) => {
         req.session.user.sessionId = climbSession.id
         res.redirect('/users/add-routes')
     } else {
-        res.render('users/add-climb', {message: "Unable to create session"})
+        res.render('users/add-climb', { message: "Unable to create session" })
     }
 })
 
-router.get('/add-routes', (req,res) => {
+router.get('/add-routes', (req, res) => {
     res.render('users/add-routes')
 })
 
-router.post('/add-routes', async (req,res) => {
+router.post('/add-routes', async (req, res) => {
     let userId = req.session.user.userId
     let sessionId = req.session.user.sessionId
     let routeName = req.body.routeName
@@ -80,7 +80,7 @@ router.post('/add-routes', async (req,res) => {
     }
 })
 
-router.post('/end-session', (req,res) => {
+router.post('/end-session', (req, res) => {
 
     res.redirect('/users/data')
 })
@@ -93,36 +93,34 @@ router.get('/map', (req, res) => {
 
 // ---------- DATA PAGE ROUTES -------------
 
-router.get('/data', async(req,res) => {
+router.get('/data', async (req, res) => {
     let user = req.session.user.userId
     let routesArray = []
 
     let routes = await models.UserRoute.findAll({
-            where:{
+        where: {
             userId: user
-            }
-        })
-    for (let i = 0; i <routes.length; i++){
+        }
+    })
+    for (let i = 0; i < routes.length; i++) {
         routesArray.push(routes[i].dataValues)
     }
     console.log(routesArray)
 
-    res.render('users/data', {userRoutes:routesArray})
+    res.render('users/data', { userRoutes: routesArray })
 })
 
-router.get('/edit/session/:sessionId/route/:routeId', async(req, res) => {
+router.get('/edit/session/:sessionId/route/:routeId', async (req, res) => {
     let user = req.session.user.userId
     console.log(user)
     let sessionId = req.params.sessionId
     console.log(sessionId)
     let routeId = req.params.routeId
     console.log(routeId)
-    
+
     const userRoutes = await models.UserRoute.findOne({
         where: {
-        userId : user,
-        sessionId:sessionId,
-        id: routeId
+            id: routeId
         }
     })
     const routeDetails = userRoutes.dataValues
@@ -133,7 +131,7 @@ router.get('/edit/session/:sessionId/route/:routeId', async(req, res) => {
 router.post('/edit-routes', async (req, res) => {
     let userId = req.session.user.userId
     let sessionId = req.session.user.sessionId
-    let routeId = req.body.id
+    let routeId = req.body.routeId
     let routeName = req.body.routeName
     let routeGrade = req.body.routeGrade
     let routeColor = req.body.routeColor
@@ -147,11 +145,6 @@ router.post('/edit-routes', async (req, res) => {
     }
 
     let updatedRoute = await models.UserRoute.update({
-        where: {
-        userId : userId,
-        sessionId:sessionId,
-        id: routeId
-        },
         name: routeName,
         grade: routeGrade,
         color: routeColor,
@@ -160,10 +153,14 @@ router.post('/edit-routes', async (req, res) => {
         sent: routeSent,
         sessionId: sessionId,
         userId: userId
+    },
+        {
+            where: {
+                id: routeId
+            },
+        })
 
-    })
 
-    
 
     let persistedRoute = await updatedRoute.save()
     if (persistedRoute != null) {
@@ -176,17 +173,17 @@ router.post('/delete-route', (req, res) => {
 
 
     models.UserRoute.destroy({
-        where:{
-            id:routeId
+        where: {
+            id: routeId
         }
     })
-    .then(result => console.log(result))
+        .then(result => console.log(result))
     res.redirect('/users/data')
 })
 
 // ---------- INFO PAGE ROUTES --------------
 
-router.get ('/info', (req,res) => {
+router.get('/info', (req, res) => {
     res.render('users/info')
 })
 

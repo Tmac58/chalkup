@@ -28,7 +28,6 @@ router.get('/add-climb', (req,res) => {
 router.post('/create-session', async (req,res) => {
     let userId = req.session.user.userId
 
-
     let climbSession = models.UserSession.build({
         userId: userId
     })
@@ -61,8 +60,6 @@ router.post('/add-routes', async (req,res) => {
         routeSent = false
     }
 
-    console.log(attempts)
-
     let route = models.UserRoute.build({
         name: routeName,
         grade: routeGrade,
@@ -80,7 +77,11 @@ router.post('/add-routes', async (req,res) => {
     }
 })
 
-router.post('/end-session', (req,res) => {
+router.post('/end-session', async (req,res) => {
+    let totalSeconds = req.body.totalSecondsValue
+    let userId = req.session.user.userId
+    let sessionId = req.session.user.sessionId
+
 
     res.redirect('/users/data')
 })

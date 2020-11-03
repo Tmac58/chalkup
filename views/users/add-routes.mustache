@@ -12,6 +12,10 @@
 
         {{> navHeader}}
 
+        <div id="sessionTimerCont">
+            <span id="sessionTimeDisplay" value='0'>00:00</span>
+        </div>
+
         <div class="addRouteCont">
             <div id="addRouteBtnCont">
                 <i id="addRouteBtn" class="fas fa-plus addRouteBtn"></i>
@@ -24,6 +28,7 @@
 
         <div id="endSessionCont">
                 <form method="POST" action="/users/end-session">
+                    <input type='hidden' name="totalSecondsValue" id='totalSecondsValue' value='0'>
                     <button type="submit" class="signInBtn" id="endSessionBtn">End Session</button>
                 </form>
         </div>

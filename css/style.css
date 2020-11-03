@@ -252,7 +252,7 @@ body {
     }
 
     .addSessionCont {
-        margin-top: 175px;
+        margin-top: 130px;
     }
 
     #addSessionBtn {
@@ -265,9 +265,31 @@ body {
         border: 10px solid #6bbb57;
         font-size: 1.1em;
     }
+    #addSessionBtn:focus {
+        background: #6bbb57;
+        color: white;
+        border: 10px solid white;
+    }
+
+    #sessionTimerCont {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        padding: 20px;
+        border: 5px solid #6bbb57;
+        background: #3c3c3c;
+        color: white;
+        width: 355px;
+    }
+
+    #sessionTimeDisplay {
+        font-size: 5em;
+    }
 
     .addRouteCont {
-        margin-top: 90px;
+        margin-top: 10px;
         width: 100%;
         display:flex;
     }

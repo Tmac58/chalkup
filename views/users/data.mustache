@@ -114,7 +114,7 @@
                                 <h2>{{name}}</h2>
                             </div>
                             <div class = "date-edit-delete-cont">
-                                <div>10/19/2020</div>
+                                <div>{{formattedDate}}</div>
                                 <section class = "data-edit-delete">
                                     <a href = "/users/edit/route/{{id}}">
                                         <button class ="route-edit"><i class="fas fa-edit">Edit</i></button>
@@ -140,7 +140,7 @@
                                 <div class="dataInfo sentCont">sent: <span class="sentBool-{{sent}}">{{sent}}</span></div>
                             </section>
                             <section id = "data-time">
-                                <div id = "time-value">1:35</div>
+                                <div id = "time-value">{{formattedTime}}</div>
                                 <label id = "time-label">Time</label>
                             </section>
                         </section>

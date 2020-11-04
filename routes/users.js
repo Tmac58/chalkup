@@ -93,8 +93,8 @@ router.get('/map', (req, res) => {
 // ---------- DATA PAGE ROUTES -------------
 
 router.get('/data', async (req, res) => {
-    let user = req.session.user.userId
-    // let user = 18 // TESTING ONLY USE ABOVE FOR RELEASE!!!!!!
+    // let user = req.session.user.userId
+    let user = 18 // TESTING ONLY USE ABOVE FOR RELEASE!!!!!!
     let routesArray = []
     let sessionsArray = []
     
@@ -112,8 +112,14 @@ router.get('/data', async (req, res) => {
             userId: user
         }
     })
+
     for (let i = 0; i < routes.length; i++) {
-        routesArray.push(routes[i].dataValues)
+        let route = routes[i].dataValues
+
+        route.formattedDate = formatDate(route.createdAt)
+        route.formattedTime = findTimeDisplay(route.totalSeconds)
+
+        routesArray.push(route)
     }
 
     let timeArray = []
@@ -250,8 +256,18 @@ router.get('/data', async (req, res) => {
         avgGradeMonth = Math.round(gradeTotals / array.length)
     }
     findAvgGradeMonth(gradesArrayMonth)
-    
-    
+
+    // format Date
+    function formatDate(routeDate) {
+        let fullDate = new Date(routeDate)
+        let year = fullDate.getFullYear()
+        let month = fullDate.getMonth() + 1
+        let day = fullDate.getDate()
+        let dateFormat = `${month} / ${day} / ${year}`
+
+        return dateFormat
+    }
+     
 
     let userObject = {
         totalSessions: sessionsArray.length,
@@ -270,7 +286,6 @@ router.get('/data', async (req, res) => {
 
     }
 
-    // console.log(userObject)
     res.render('users/data', userObject)
 })
 

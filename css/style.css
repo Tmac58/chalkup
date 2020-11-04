@@ -242,10 +242,6 @@ body {
 /*======================Map================================*/
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-       #map {
-        height: 90vh;
-        width: 100vw;
-      }
       
       /* Optional: Makes the sample page fill the window. */
       html,
@@ -645,7 +641,6 @@ body {
           padding-left: 10px;
       }
     
-}
 
 /*==================DATA================*/
 #dataPageCont {
@@ -937,9 +932,11 @@ body {
           margin-top: 10px;
       }
 
-      #map {
-        height: 80vh;
-    }
+      #map{
+          height: 80vh;
+          width: 100%;
+      }
+
     .mapCont{
         display: flex;
         flex-direction: column;

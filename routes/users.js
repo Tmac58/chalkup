@@ -87,8 +87,7 @@ router.post('/end-session', async (req,res) => {
 // --------------MAP ROUTES ---------------
 
 router.get('/map', (req, res) => {
-
-    res.render('/users/map')
+    res.render('users/map')
 })
 
 // ---------- DATA PAGE ROUTES -------------
@@ -272,6 +271,7 @@ router.post('/delete-route', (req, res) => {
 router.get('/info', (req, res) => {
     res.render('users/info')
 })
+
 
 // export to app.js
 module.exports = router

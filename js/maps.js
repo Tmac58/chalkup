@@ -1,8 +1,15 @@
+
 const apiKey = "AIzaSyCi1mGkCAUSHtMZ6pRCWg8VoVhkj5ROb1c"
 const testData = []
 window.addToList = function(props){
+  if (testData.includes(props)){
+    console.log('props in array')
+  }
+  
+  else{
   testData.push(props)
   console.log(testData)
+  }
 }
 
 function init() {

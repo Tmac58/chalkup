@@ -91,6 +91,10 @@ body {
         border: 2px solid white;
     }
 
+    #guestBtn {
+        margin-top: 30px;
+    }
+
     .userIcon {
         height: 150px;
         margin-top: 0px;

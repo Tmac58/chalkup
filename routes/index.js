@@ -95,6 +95,39 @@ router.post('/login', async (req,res) => {
     }
 })
 
+router.post('/login-guest', async (req, res) => {
+    const username = "guest"
+    const password = "password"
+
+    // find user in table Users by username
+    let user = await models.Users.findOne({
+        where: {
+            username: username
+        }
+    })
+    // check if user exists
+    if (user != null) {
+        // check input password against hashed password in table
+        bcrypt.compare(password, user.password, (error, result) => {
+            if (result) {
+                // create a session and redirect user
+                if (req.session) {
+                    // set session user to userId & authenticate user
+                    req.session.user = {userId: user.id}
+                    req.session.isAuthenticated = true
+                    // send user to homepage (data)
+                    res.redirect('/users/data')
+                }
+            } else {
+                // if error signing in -> send user back to login page
+                res.redirect('/', {message: 'Incorrect username or password'})
+            }
+        })
+    } else {
+        res.redirect('/')
+    }
+})
+
 
 
 // export to app.js

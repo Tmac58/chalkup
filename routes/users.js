@@ -93,8 +93,8 @@ router.get('/map', (req, res) => {
 // ---------- DATA PAGE ROUTES -------------
 
 router.get('/data', async (req, res) => {
-    // let user = req.session.user.userId
-    let user = 18 // TESTING ONLY USE ABOVE FOR RELEASE!!!!!!
+    let user = req.session.user.userId
+    // let user = 18 // TESTING ONLY USE ABOVE FOR RELEASE!!!!!!
     let routesArray = []
     let sessionsArray = []
     

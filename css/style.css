@@ -741,6 +741,12 @@ body {
     width: 100vw;
 }
 
+#allRoutesTitleCont {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .monthly-stats-container {
     display: flex;
     flex-direction: column;
@@ -769,23 +775,79 @@ body {
 }
 
 .data-item{
-    border-bottom: 2px solid grey ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .data-header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 1rem;
     font-weight: 500;
     color: white;
     padding: 0.5rem;
     padding-bottom: 0rem;
+    padding-top: 0;
+    width: 100%;
+
+}
+
+.routeName {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.routeColor-red {
+    background: rgb(255, 45, 45);
+}
+.routeColor-green {
+    background: #1e9400;
+}
+.routeColor-blue {
+    background: rgb(0, 102, 255);
+}
+.routeColor-black {
+    background: black;
+}
+.routeColor-grey {
+    background: slategrey;
+}
+.routeColor-pink {
+    background: rgb(255, 145, 163);
+}
+.routeColor-orange {
+    background: rgb(255, 174, 23);
+}
+.routeColor-yellow {
+    background: rgb(203, 203, 1);
+    color: black;
+}
+
+
+
+.date-edit-delete-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
 }
 
 .data-name-data{
     display: flex;
     flex-direction: column;
+}
+
+.dataCategories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 }
 
 .data-information{
@@ -796,13 +858,25 @@ body {
     justify-content: space-between;
     color: white;
     margin-bottom: 0.5rem;
+    width: 80%;
+}
+
+sentCont {
+    display: inline;
+
+}
+
+.sentBool-true {
+    color: #96ff7b;
+}
+.sentBool-false {
+    color: rgb(255, 45, 45);
 }
 
 #data-grade {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 1rem;
     font-weight: 700;
     font-size: 2rem;
 
@@ -812,15 +886,18 @@ body {
     font-size: 1.2rem;
 }
 
+.dataInfo {
+    margin-bottom: 5px;
+}
+
 #data-time {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 1.5rem;
     font-weight: 700;
-    margin-left: 4rem;
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
+
 
 #time-label {
     color: #6bbb57;
@@ -833,9 +910,16 @@ body {
     flex-direction: row;
 }
 
-.route-delete-edit{
+.route-edit {
     font-size: 1rem;
-    color: white;
+    color: rgb(0, 102, 255);
+    border:none;
+    background: transparent;
+}
+
+.route-delete {
+    font-size: 1rem;
+    color: rgb(255, 45, 45);
     border:none;
     background: transparent;
 }

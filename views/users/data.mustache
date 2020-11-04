@@ -99,48 +99,61 @@
                     </section>
                 </div>
             </div>
-            <section class = "data-title">All Routes Stats</section>
-                {{# userRoutes}}
-            <div class = "data-item">
-            <section class = "data-header">
-                <div class = "data-name-date">
-                    <div>{{name}}</div>
-                    <div>10/19/2020</div>
-                </div>
-                <section class = "data-edit-delete">
-                    <a href = "/users/edit/route/{{id}}">
-                        <button class = "route-delete-edit"><i class="fas fa-edit">Edit</i></button>
-                    </a>
-                    <form method = "POST" action = "/users/delete-route">
-                        <input type = "hidden" value={{id}} name = "id">
-                        <input type = "hidden" value={{session_Id}} name = "sessionid">
-                        <button class = "route-delete-edit"><i class="fas fa-trash"></i></button>    
-                    </form>
-                    
-                </section>
-            </section>
-                
-            <section class = "data-information">
-                <section id = "data-grade">
-                    <div>{{grade}}</div>
-                    <label id = "grade-label">Grade</label>
-                </section>
-                <section class = "data-categories">
-                    <div>color: {{color}}</div>
-                    <div>rating: {{rating}}</div>
-                    <div>attempts: {{attempts}}</div>
-                    <div>sent: {{sent}}</div>
-                </section>
-                <section id = "data-time">
-                    <div id = "time-value">1:35</div>
-                    <label id = "time-label">Time</label>
-                </section>
 
-            </section>
-            </div>
+            <div id='allRoutesCont'>
+
+                <div id="allRoutesTitleCont">
+                    <h1 class = "statsTitle">All Routes</h1>
+                </div>
+
+                {{# userRoutes}}
+
+                    <div class = "data-item">
+                        <section class = "data-header">
+                            <div class='routeName routeColor-{{color}}' style="background: {{color}}">
+                                <h2>{{name}}</h2>
+                            </div>
+                            <div class = "date-edit-delete-cont">
+                                <div>10/19/2020</div>
+                                <section class = "data-edit-delete">
+                                    <a href = "/users/edit/route/{{id}}">
+                                        <button class ="route-edit"><i class="fas fa-edit">Edit</i></button>
+                                    </a>
+                                    <form method = "POST" action = "/users/delete-route">
+                                        <input type = "hidden" value={{id}} name = "id">
+                                        <input type = "hidden" value={{session_Id}} name = "sessionid">
+                                        <button class = "route-delete"><i class="fas fa-trash"></i></button>    
+                                    </form>
+                                </section>
+                            </div>
+                            
+                        </section>
+                        
+                        <section class = "data-information">
+                            <section id = "data-grade">
+                                <div>{{grade}}</div>
+                                <label id = "grade-label">Grade</label>
+                            </section>
+                            <section class = "dataCategories">
+                                <div class="dataInfo">rating: {{rating}} stars</div>
+                                <div class="dataInfo">attempts: {{attempts}}</div>
+                                <div class="dataInfo sentCont">sent: <span class="sentBool-{{sent}}">{{sent}}</span></div>
+                            </section>
+                            <section id = "data-time">
+                                <div id = "time-value">1:35</div>
+                                <label id = "time-label">Time</label>
+                            </section>
+                        </section>
+
+                    </div>
 
                 {{/ userRoutes}}
-        </div>
+
+            </div>
+
+         </div>
+
+
 
 
         {{> navbar}}

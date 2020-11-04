@@ -87,8 +87,7 @@ router.post('/end-session', async (req,res) => {
 // --------------MAP ROUTES ---------------
 
 router.get('/map', (req, res) => {
-
-    res.render('/users/map')
+    res.render('users/map')
 })
 
 // ---------- DATA PAGE ROUTES -------------
@@ -273,9 +272,6 @@ router.get('/info', (req, res) => {
     res.render('users/info')
 })
 
-router.get('/map', (req, res) => {
-    res.render('users/map')
-})
 
 // export to app.js
 module.exports = router

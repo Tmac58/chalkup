@@ -145,12 +145,7 @@ body {
         overflow: hidden;
         position: fixed;
         bottom: 0;
-<<<<<<< HEAD
-        margin: 0px;
-        height: 10vh;
-=======
         height: 12vh;
->>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00
         width: 100vw;
         background: rgb(18, 18, 18);
     }
@@ -159,12 +154,7 @@ body {
         overflow: hidden;
         position: fixed;
         top: 0;
-<<<<<<< HEAD
-        margin: 0px;
-        height: 10vh;
-=======
         height: 12vh;
->>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00
         width: 100vw;
         background: rgb(18, 18, 18);
     }
@@ -622,9 +612,6 @@ body {
           margin-top: 50px;
           padding: 10px;
       }
-<<<<<<< HEAD
-    
-=======
 
       /* ------ INFO PAGE -------- */
       .infoCont {
@@ -950,4 +937,3 @@ body {
           margin-top: 10px;
       }
 
->>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00

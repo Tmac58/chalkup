@@ -12,36 +12,16 @@
 
         {{> navHeader}}
 
-        <div id="sessionTimerCont">
-            <span id="sessionTimeDisplay" value='0'>00:00</span>
-        </div>
+        <div id="editrouteCont">
+            <h3 id='routeDetailsTitle'>Edit Route Details</h3>
 
-        <div class="addRouteCont">
-            <div id="addRouteBtnCont">
-                <i id="addRouteBtn" class="fas fa-plus addRouteBtn"></i>
-            </div>
-            <div id="addRouteLabelCont">
-                <span id="addRouteLabel">Start Route</span>
-            </div>
-
-        </div>
-
-        <div id="endSessionCont">
-                <form method="POST" action="/users/end-session">
-                    <button type="submit" class="signInBtn" id="endSessionBtn">End Session</button>
-                </form>
-        </div>
-
-        <div id="routeCont">
-            <h3 id='routeDetailsTitle'>Route Details</h3>
-
-            <form id="addRouteForm" action="/users/add-routes" method="POST">
+            <form id="addRouteForm" action="/users/edit-routes" method="POST">
 
                 <label class="routeDetailsLabel" for="routeName">Name</label>
-                <input class="routeInputText" type="text" name='routeName' id='routeNameInput' placeholder='Route Name' autocomplete="off" style="padding: 5px 10px;">
-                
+                <input class="routeInputText" value = {{name}} type="text" name='routeName' id='routeNameInput' placeholder='Route Name' style="padding: 5px 10px;">
+                <input class = "routeId" type = "hidden" name = "routeId" value = {{id}}>
                 <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
-                <select class='routeInputText routeGrade' id="routeGrade" name="routeGrade" style="padding: 5px 10px;">
+                <select class='routeInputText routeGrade' id="routeGrade" name="routeGrade" style="padding: 5px 10px;" value = {{grade}}>
                     <option value="5.5">5.5</option>
                     <option value="5.6">5.6</option>
                     <option value="5.7">5.7</option>
@@ -65,7 +45,7 @@
                 </select>
 
                 <label class="routeDetailsLabel" for='routeColor'>Color</label>
-                <select class="routeInputText" name='routeColor' id="routeColor" style="padding: 5px 10px;">
+                <select class="routeInputText" name='routeColor' id="routeColor" style="padding: 5px 10px;" value = {{color}}>
                     <option value="black">Black</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
@@ -79,7 +59,7 @@
                 <label class="routeDetailsLabel" for='routeColor'>Attempts</label>
                 <div id="incrementCont">
                     <i id="minusAttempt"class="far fa-arrow-alt-circle-down incrementBtn"></i>
-                    <input class="routeInputText" type="text" name="attempts" id="attemptsInput" value="1">
+                    <input class="routeInputText" type="text" name="attempts" id="attemptsInput" value={{attempts}}>
                     <i id="plusAttempt" class="far fa-arrow-alt-circle-up incrementBtn"></i>
                 </div>
 
@@ -87,11 +67,11 @@
                 
 
                 <label class="routeDetailsLabel" for='routeSent'>Sent</label>
-                    <input type="checkbox" id="sentSwitch" name="routeSent" />
-                    <label for="sentSwitch" class="sentLabel">Toggle</label>
+                    <input type="checkbox" id="sentSwitch" name="routeSent" value ={{sent}}/>
+                    <label for="sentSwitch" class="sentLabel" value = {{sent}}>Toggle</label>
 
                 <label class="routeDetailsLabel" for="starRating">Rating</label>
-                <div type="radio" id="starRating" name="starRating" class="rating">
+                <div type="radio" id="starRating" name="starRating" class="rating" value = {{rating}}>
                     <label>
                         <input type="radio" name="stars" value="1" />
                         <span class="icon">★</span>
@@ -123,15 +103,10 @@
                         <span class="icon">★</span>
                     </label>
                 </div>
-                
-                <input type='hidden' name="totalSecondsValue" id='totalSecondsValue' value='0'>
-                <button type="submit" class="signInBtn" id="submitRouteBtn">Add</button>
 
-            </form>
+                <button type="submit" class="signInBtn" id="submitRouteBtn">Save</button>
 
-  
-
-            
+            </form> 
         
         </div>
 

@@ -1,6 +1,12 @@
+
 function init() {
+  const successCallback = (position => {
+    console.log(position)
+    const longitude = position.coords.longitude
+    const latitude = position.coords.latitude
+
     const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -33.8688, lng: 151.2195 },
+      center: { lat: latitude, lng: longitude },
       zoom: 13,
       mapTypeId: "roadmap",
     });
@@ -61,8 +67,16 @@ function init() {
       });
       map.fitBounds(bounds);
     });
+  })
+  const errorCallback = (error) => {
+    console.log(error)
   }
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
 
+}
+
+
+  
    /* const getPlaces = async(apiKey) => {
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
         //const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=rock+climbing&types=establishment&location=40.7017,-74.3222&radius=500&key=${apiKey}`
@@ -88,4 +102,3 @@ function init() {
     mapMarker(testData)
     getPlaces(apiKey)*/
     //}
-    

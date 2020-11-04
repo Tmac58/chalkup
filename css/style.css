@@ -8,6 +8,7 @@ body {
 @media (max-width: 425px) {
     body {
         background: #282828;
+        margin: 0
     }
 
     #goBackBtn {
@@ -27,6 +28,24 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 12vh;
+        margin-top:12vh;
+
+    }
+
+    #mainCont {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12vh;
+        margin-top:12vh;
+    }
+
+    #homepageCont {
+        margin: 0;
+    }
+
+    #registerCont {
+        margin: 0;
     }
 
     .logoCont {
@@ -65,7 +84,6 @@ body {
         border: 2px solid #6bbb57;
         outline: none;
         padding: 5px;
-        transition: 0.2s ease-out;
     }
     .signInBtn:focus {
         background: #6bbb57;
@@ -94,12 +112,9 @@ body {
         border-bottom: 5px solid #6bbb57;
         color: white;
         background: #5b5b5b;
-        opacity: 0.7;
-        transition: 0.2s ease-out;
     }
     .signUpInput:focus {
         border-bottom: 5px solid #33ff00;
-        opacity: 1;
         outline: none;
     }
 
@@ -115,27 +130,41 @@ body {
     #logInBtn {
         margin-top: 40px;
     }
+    #logInBtn:focus {
+        background: #6bbb57 !important;
+        color: white !important;
+        border: 2px solid white !important;
+    }
 
     ::placeholder {
         color: white;
     }
 
     /*===========================================================*/
-
     #navbar {
+        overflow: hidden;
         position: fixed;
         bottom: 0;
+<<<<<<< HEAD
         margin: 0px;
         height: 10vh;
+=======
+        height: 12vh;
+>>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00
         width: 100vw;
         background: rgb(18, 18, 18);
     }
 
     #nav-header{
+        overflow: hidden;
         position: fixed;
         top: 0;
+<<<<<<< HEAD
         margin: 0px;
         height: 10vh;
+=======
+        height: 12vh;
+>>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00
         width: 100vw;
         background: rgb(18, 18, 18);
     }
@@ -178,6 +207,8 @@ body {
         color: #6bbb57;
         font-size:  2rem;
         margin-top: 0px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
     }
 
     .logoIconCont-header {
@@ -192,6 +223,7 @@ body {
     .logoIcon-header {
         height: 2.5rem;
         margin-top: 0px;
+        padding-bottom: 10px;
     }
 
     .logoTitle-header{
@@ -314,7 +346,7 @@ body {
     }
 
     .addSessionCont {
-        margin-top: 175px;
+        margin-top: 130px;
     }
 
     #addSessionBtn {
@@ -327,9 +359,31 @@ body {
         border: 10px solid #6bbb57;
         font-size: 1.1em;
     }
+    #addSessionBtn:focus {
+        background: #6bbb57;
+        color: white;
+        border: 10px solid white;
+    }
+
+    #sessionTimerCont {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        padding: 20px;
+        border: 5px solid #6bbb57;
+        background: #3c3c3c;
+        color: white;
+        width: 355px;
+    }
+
+    #sessionTimeDisplay {
+        font-size: 5em;
+    }
 
     .addRouteCont {
-        margin-top: 90px;
+        margin-top: 10px;
         width: 100%;
         display:flex;
     }
@@ -345,6 +399,16 @@ body {
         color: #6bbb57;
     }
 
+    #endSessionBtn {
+        color: red;
+        border: 2px solid red;
+    }
+    #endSessionBtn:focus {
+        background: rgb(255, 123, 123);
+        color: rgb(160, 0, 0);
+        border: 2px solid rgb(160, 0, 0);
+    }
+
     #addRouteLabelCont {
         width: 100%;
         display: flex;
@@ -358,6 +422,15 @@ body {
 
     #routeCont {
         display: none; /*CHANGE TO NONE*/
+        flex-direction: column;
+        align-items: center;
+        height: 115vh;
+        width: 95%;
+        margin-top: 10px;
+        background: #3c3c3c;
+        color: #6bbb57;
+    }
+    #editrouteCont {
         flex-direction: column;
         align-items: center;
         height: 115vh;
@@ -521,8 +594,360 @@ body {
           border-radius: 16px 0 16px 0;
       }
 
+      #incrementCont {
+          display: flex;
+          align-items: center;
+      }
+
+
+      #attemptsInput {
+          width: 70px;
+          text-align: center;
+      }
+
+      .incrementBtn {
+          color: #6bbb57;
+          background: none;
+          outline: none;
+          font-size: 1.5em;
+          margin-left: 15px;
+          margin-right: 15px;
+          border-radius: 50%;
+      }
+      .incrementBtn:focus {
+          color: #33ff00;
+      }
+
       #submitRouteBtn {
           margin-top: 50px;
           padding: 10px;
       }
+<<<<<<< HEAD
     
+=======
+
+      /* ------ INFO PAGE -------- */
+      .infoCont {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 10px;
+          width: 100%;
+      }
+
+      #infoTitleCont {
+          margin-top: 0;
+      }
+
+      #infoTitle {
+          color: #6bbb57;
+          border-bottom: 1px solid #6bbb57;
+      }
+
+      .typesCont {
+          background: #121212;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .infoDetailTitle {
+          color: #6bbb57;
+          padding-left: 10px;
+      }
+    
+}
+
+/*==================DATA================*/
+#dataPageCont {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------- TOTAL STATS ---------- */
+#totalStatsCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#totalStatsTitle {
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 5px;
+}
+
+.dataRowCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.rowLabel {
+    color: white;
+    font-size: 1.3em;
+    border-bottom: 2px solid white;
+}
+
+.dataRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 3px solid #96ff7b;
+    background: rgb(18, 18, 18);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.dataInputValue {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #6bbb57;
+}
+.dataInputLabel {
+    margin: 0;
+    color: white
+}
+
+#totalSessRoutesCont {
+    display: flex;
+    color: white;
+}
+
+
+
+
+.data-title{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    width: 100vw;
+    border-bottom: 2px solid white;
+}
+
+#data-monthly-stats{
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    width: 100vw;
+}
+
+.monthly-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 1rem;
+    font-weight: 500;
+    margin-bottom: 0rem;
+}
+.monthly-stats-value{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6bbb57;
+}
+.stats-title{
+    text-align: center;
+    font-weight: 700;
+}
+#data-averages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.data-item{
+    border-bottom: 2px solid grey ;
+}
+
+.data-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding: 0.5rem;
+    padding-bottom: 0rem;
+}
+
+.data-name-data{
+    display: flex;
+    flex-direction: column;
+}
+
+.data-information{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+#data-grade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+#grade-label {
+    color: #6bbb57;
+    font-size: 1.2rem;
+}
+
+#data-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.5rem;
+    font-weight: 700;
+    margin-left: 4rem;
+    font-size: 1.75rem;
+}
+
+#time-label {
+    color: #6bbb57;
+    font-size: 1.2rem;
+}
+
+#data-averages {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.route-delete-edit{
+    font-size: 1rem;
+    color: white;
+    border:none;
+    background: transparent;
+}
+
+.data-edit-delete{
+    display: flex;
+    flex-direction: row;
+}
+
+      .moreInfo {
+          color: #6bbb57;
+          padding-right: 10px;
+          font-size: 1.3em;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      .shown {
+          display: block;
+      }
+
+      .infoContents {        
+          background: #3c3c3c;
+          padding-left: 5px;
+          padding-right: 5px;
+          overflow-y: auto;
+          height: 400px;
+
+      }
+
+      .infoContentText {
+          padding-left: 10px;
+      }
+
+      .infoContentsTextTitle {
+          color: white;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-bottom: 1px solid white;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .infoContentsTextDetail {
+          color: white;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-weight: 400;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .imageCont {
+          display: flex;
+          justify-content: center;
+      }
+
+      #styleImage {
+          height:300px;
+          width: 200px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #gradeImage {
+        margin-bottom: 50px;
+        margin-top: 10px;
+        border: 3px solid #6bbb57;
+      }
+
+      #gearImage {
+          width: 400px;
+          margin-top: 10px;
+          border: 3px solid #6bbb57;
+      }
+
+      #chalkImage {
+          height: 150px;
+          width: 70%;
+          border: 3px solid #6bbb57;
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+
+      #shoesImage {
+        border: 3px solid #6bbb57;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 70%;
+      }
+
+      #shoeDetails {
+          margin-bottom: 150px;
+      }
+
+      .terminologyEntry {
+          margin-bottom: 10px;
+      }
+
+      .finalEntry {
+          margin-bottom: 150px;
+      }
+
+      .holdsImg {
+        border: 3px solid #6bbb57;
+        width: 70%;
+      }
+
+      .video {
+          border: 3px solid #6bbb57;
+          margin-top: 10px;
+      }
+
+>>>>>>> 7fbda8cdd2e89b44375c44675af3e5e752265c00

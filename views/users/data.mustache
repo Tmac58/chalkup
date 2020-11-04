@@ -17,7 +17,7 @@
         <div id = "mainCont">
 
             <div id="totalStatsCont">
-                <h1 id="totalStatsTitle">Total Stats</h1>
+                <h1 class="statsTitle" id="totalStatsTitle">Total Stats</h1>
 
                 <div class="dataRowCont" id="totalSessRoutesCont">
                     <div class="dataRow" id="totalSessCont">
@@ -68,24 +68,37 @@
 
             </div>
 
-            <label id = "data-monthly-stats" >This month's stats</label>
-            <section id = "data-averages">
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">5x</div>
-                    <label class = "stats-title">Sessions</label>
+            
+            <div id='monthStatsCont'>
+
+                <div id="MonthStatsTitle">
+                    <h1 class="statsTitle" id ="data-monthly-stats">This Month</h1>
                 </div>
 
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">1:40</div>
-                    <label class = "stats-title">Time</label>
-                </div>
+                <div id="monthStatsDataCont">
+                    <section id = "data-averages">
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">{{sessionsThisMonth}}</div>
+                            <label class = "stats-title">Sessions</label>
+                        </div>
 
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">5</div>
-                    <label class = "stats-title">Avg Grade</label>
-                </div>
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">{{routesThisMonth}}</div>
+                            <label class = "stats-title">Routes</label>
+                        </div>
 
-            </section>
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">5.{{highestGradeMonth}}</div>
+                            <label class = "stats-title">Highest Grade</label>
+                        </div>
+
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">5.{{avgGradeMonth}}</div>
+                            <label class = "stats-title">Avg Grade</label>
+                        </div>
+                    </section>
+                </div>
+            </div>
             <section class = "data-title">All Routes Stats</section>
                 {{# userRoutes}}
             <div class = "data-item">

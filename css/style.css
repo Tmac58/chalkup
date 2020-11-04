@@ -645,7 +645,7 @@ body {
           padding-left: 10px;
       }
     
-}
+
 
 /*==================DATA================*/
 #dataPageCont {
@@ -659,9 +659,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 5px solid #6bbb57;
 }
 
-#totalStatsTitle {
+.statsTitle {
     color: white;
     border-bottom: 2px solid white;
     margin-bottom: 5px;
@@ -709,8 +710,20 @@ body {
     color: white;
 }
 
+#monthStatsCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #6bbb57;
+    padding-bottom: 20px;
+}
 
-
+#monthStatsDataCont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .data-title{
     color: white;
@@ -720,8 +733,9 @@ body {
     border-bottom: 2px solid white;
 }
 
-#data-monthly-stats{
+#monthStatsTitle{
     color: white;
+    border-bottom: 2px solid white;
     font-size: 1.5rem;
     padding: 0.75rem;
     width: 100vw;

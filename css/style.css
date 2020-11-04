@@ -937,3 +937,12 @@ body {
           margin-top: 10px;
       }
 
+      #map {
+        height: 80vh;
+    }
+    .mapCont{
+        display: flex;
+        flex-direction: column;
+        margin-top: 12vh;
+    }
+

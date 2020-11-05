@@ -17,8 +17,10 @@
           <span class="close">&times;</span>
           {{# locations}}
           <div class = "location-title">{{gym_name}}</div>
-          <div class = "location-content">{{address}}</div>
-          <div class = "location-content">rating: {{rating}} in {{reviews}} reviews</div>
+          <div class = location-content-container>
+            <div class = "location-content">{{address}}</div>
+            <div class = "location-content">rating: {{rating}} in {{reviews}} reviews</div>
+          </div>
           {{/ locations}}
         </div>
       

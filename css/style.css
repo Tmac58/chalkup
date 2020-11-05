@@ -274,48 +274,6 @@ body {
         display: inline;
       }
 
-.pac-card {
-  margin: 10px 10px 0 0;
-  border-radius: 2px 0 0 2px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  font-family: Roboto;
-}
-
-#pac-container {
-  padding-bottom: 12px;
-  margin-right: 12px;
-}
-
-.pac-controls {
-  display: inline-block;
-  padding: 5px 11px;
-}
-
-.pac-controls label {
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-#pac-input {
-  background-color: #fff;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
-  text-overflow: ellipsis;
-  width: 400px;
-}
-
-#pac-input:focus {
-  border-color: #4d90fe;
-}
-
 #title {
   color: #fff;
   background-color: #4d90fe;
@@ -1047,10 +1005,17 @@ sentCont {
           height: 80vh;
           width: 100%;
       }
+      #locations-button {
+          height: 2rem;
+          z-index: 0.9
+      }
 
     .mapCont{
+        background:white;
         display: flex;
         flex-direction: column;
+        position: fixed;
+        width: 100%;
         margin-top: 12vh;
     }
     /*====================Modal===================*/
@@ -1060,6 +1025,7 @@ sentCont {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    padding-top: 100px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -1077,6 +1043,9 @@ sentCont {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+  .close{
+    font-size: 1.5rem;
+}
 
  .location-title{
      font-size: 1.1rem;
@@ -1084,12 +1053,12 @@ sentCont {
      padding-bottom: 0.3rem;
      border-bottom: 1px white solid;
  }
+ .location-content-container{
+     margin-bottom: 0.3rem;
+ }
  .location-content{
      padding-top: 0.3rem;
      margin-left: 0.5rem;
- }
- #locations-button{
-    z-index: 0.5; /* Sit on top */
  }
 
 }
@@ -1358,10 +1327,6 @@ body {
 /*======================Map================================*/
 /* Always set the map height explicitly to define the size of the div
    * element that contains the map. */
-   #map {
-    height: 90vh;
-    width: 100vw;
-  }
   
   /* Optional: Makes the sample page fill the window. */
   html,
@@ -1389,47 +1354,6 @@ body {
     display: inline;
   }
 
-.pac-card {
-margin: 10px 10px 0 0;
-border-radius: 2px 0 0 2px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
-outline: none;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-background-color: #fff;
-font-family: Roboto;
-}
-
-#pac-container {
-padding-bottom: 12px;
-margin-right: 12px;
-}
-
-.pac-controls {
-display: inline-block;
-padding: 5px 11px;
-}
-
-.pac-controls label {
-font-family: Roboto;
-font-size: 13px;
-font-weight: 300;
-}
-
-#pac-input {
-background-color: #fff;
-font-family: Roboto;
-font-size: 15px;
-font-weight: 300;
-margin-left: 12px;
-padding: 0 11px 0 13px;
-text-overflow: ellipsis;
-width: 400px;
-}
-
-#pac-input:focus {
-border-color: #4d90fe;
-}
 
 #title {
 color: #fff;
@@ -2197,13 +2121,59 @@ flex-direction: row;
       margin-top: 10px;
   }
 
-  #map {
-    height: 80vh;
+  #map{
+    height: calc(100vh - 140px);
+    width: 100%;
 }
+
 .mapCont{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    margin-top: 12vh;
+    position: absolute;
+    width: 100%;
+    margin-top: 140px;
 }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .close{
+      font-size: 1.5rem;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgba(48, 47, 47, 0.6);
+    font-size: 0.8rem;
+    color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+ .location-title{
+     font-size: 1.1rem;
+     width: 100%;
+     padding-bottom: 0.3rem;
+     border-bottom: 1px white solid;
+ }
+ .location-content{
+     padding-top: 0.3rem;
+     margin-left: 0.5rem;
+ }
+ #locations-button{
+    z-index: 0.5; /* Sit on top */
+ }
 
 }

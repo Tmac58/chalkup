@@ -1509,7 +1509,7 @@ padding: 6px 12px;
     align-items: center;
     height: 115vh;
     width: 95%;
-    margin-top: 10px;
+    margin-top: 50px;
     background: #3c3c3c;
     color: #6bbb57;
 }
@@ -1524,7 +1524,8 @@ padding: 6px 12px;
     color: #6bbb57;
     margin: 10px;
     border-bottom: 2px solid #6bbb57;
-    font-size: 1.5em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .routeDetailsLabel {

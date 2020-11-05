@@ -644,6 +644,11 @@ body {
           border-bottom: 2px solid #6bbb57;
       }
 
+      html {
+          scroll-behavior: smooth;
+      }
+      
+
 
       .infoDetailTitle {
           color: #6bbb57;

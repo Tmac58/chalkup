@@ -15,7 +15,11 @@ const authenticate = require('./authenticate')
 const VIEWS_PATH = path.join(__dirname, '/views')
 // local host port
 const PORT = 3000  // LOCAL PORT ONLY!!!
+<<<<<<< HEAD
 //const PORT = process.env.PORT || 8080
+=======
+// const PORT = process.env.PORT || 8080
+>>>>>>> 1380737b646aa1f11af34a1fec2443f3ca671069
 //salt rounds for password encryption
 SALT_ROUNDS = 10
 
@@ -30,8 +34,8 @@ app.use(session({
     saveUninitialized: false // won't save if nothing in session
 }))
 app.use('/', indexRoutes) // any route at root handled in ./routes/index
-app.use('/users', authenticate.authenticate, userRoutes) // any route at /users/...
-// app.use('/users', userRoutes) // ------------ NO AUTHENTICATION, DELETE AND USE ABOVE FOR RELEASE!!!! ------------
+// app.use('/users', authenticate.authenticate, userRoutes) // any route at /users/...
+app.use('/users', userRoutes) // ------------ NO AUTHENTICATION, DELETE AND USE ABOVE FOR RELEASE!!!! ------------
 
 // STATIC FOLDERS
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css

@@ -602,6 +602,11 @@ body {
           border-bottom: 2px solid #6bbb57;
       }
 
+      html {
+          scroll-behavior: smooth;
+      }
+      
+
 
       .infoDetailTitle {
           color: #6bbb57;
@@ -915,6 +920,7 @@ sentCont {
           padding-right: 5px;
           overflow-y: auto;
           height: 400px;
+          width: 100%;
 
       }
 
@@ -994,6 +1000,11 @@ sentCont {
       .holdsImg {
         border: 3px solid #6bbb57;
         width: 70%;
+      }
+
+      .techImg {
+          border: 3px solid #6bbb57;
+          max-height: 350px;
       }
 
       .video {
@@ -2115,6 +2126,12 @@ flex-direction: row;
     border: 3px solid #6bbb57;
     height: 300px;
   }
+
+  .techImg {
+    border: 3px solid #6bbb57;
+    max-height: 400px;
+    
+}
 
   .video {
       border: 3px solid #6bbb57;

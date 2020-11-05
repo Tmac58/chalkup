@@ -33,6 +33,13 @@ holds.addEventListener('click', () => {
     displayContents(infoContentsHolds)
 })
 
+const techniques = document.getElementById("techniques")
+const infoContentsTechniques = document.getElementById('infoContentsTechniques')
+
+techniques.addEventListener('click', () => {
+    displayContents(infoContentsTechniques)
+})
+
 
 
 

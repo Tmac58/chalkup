@@ -643,7 +643,10 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          border-top: 2px solid #6bbb57;
+          border-bottom: 2px solid #6bbb57;
       }
+
 
       .infoDetailTitle {
           color: #6bbb57;
@@ -940,6 +943,7 @@ sentCont {
           color: #6bbb57;
           padding-right: 10px;
           font-size: 1.3em;
+          
       }
 
       .hidden {
@@ -1707,7 +1711,8 @@ input:checked + .sentLabel:after {
   }
 
   #infoTitleCont {
-      margin-top: 0;
+      margin-top: 50px;
+      font-size: 2em;
   }
 
   #infoTitle {
@@ -1719,13 +1724,17 @@ input:checked + .sentLabel:after {
       background: #121212;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      border-top: 2px solid #6bbb57;
+      border-bottom: 2px solid #6bbb57;
+      cursor: pointer;
   }
 
   .infoDetailTitle {
       color: #6bbb57;
-      padding-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
   }
 
 
@@ -2035,14 +2044,14 @@ display: flex;
 flex-direction: row;
 }
 
-.dataCategories {
 
-}
 
   .moreInfo {
       color: #6bbb57;
       padding-right: 10px;
       font-size: 1.3em;
+      position: absolute;
+      right: 30px;
   }
 
   .hidden {
@@ -2058,7 +2067,7 @@ flex-direction: row;
       padding-left: 5px;
       padding-right: 5px;
       overflow-y: auto;
-      height: 400px;
+      height: 600px;
 
   }
 
@@ -2090,8 +2099,8 @@ flex-direction: row;
   }
 
   #styleImage {
-      height:300px;
-      width: 200px;
+      height:330px;
+      width: 230px;
       margin-top: 10px;
       border: 3px solid #6bbb57;
   }
@@ -2109,8 +2118,7 @@ flex-direction: row;
   }
 
   #chalkImage {
-      height: 150px;
-      width: 70%;
+      height: 250px;
       border: 3px solid #6bbb57;
       margin-top: 5px;
       margin-bottom: 5px;
@@ -2120,7 +2128,7 @@ flex-direction: row;
     border: 3px solid #6bbb57;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 70%;
+    height: 400px;
   }
 
   #shoeDetails {
@@ -2137,7 +2145,7 @@ flex-direction: row;
 
   .holdsImg {
     border: 3px solid #6bbb57;
-    width: 70%;
+    height: 300px;
   }
 
   .video {

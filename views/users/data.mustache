@@ -17,7 +17,7 @@
         <div id = "mainCont">
 
             <div id="totalStatsCont">
-                <h1 id="totalStatsTitle">Total Stats</h1>
+                <h1 class="statsTitle" id="totalStatsTitle">Total Stats</h1>
 
                 <div class="dataRowCont" id="totalSessRoutesCont">
                     <div class="dataRow" id="totalSessCont">
@@ -68,66 +68,92 @@
 
             </div>
 
-            <label id = "data-monthly-stats" >This month's stats</label>
-            <section id = "data-averages">
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">5x</div>
-                    <label class = "stats-title">Sessions</label>
+            
+            <div id='monthStatsCont'>
+
+                <div id="MonthStatsTitle">
+                    <h1 class="statsTitle" id ="data-monthly-stats">This Month</h1>
                 </div>
 
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">1:40</div>
-                    <label class = "stats-title">Time</label>
-                </div>
+                <div id="monthStatsDataCont">
+                    <section id = "data-averages">
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">{{sessionsThisMonth}}</div>
+                            <label class = "stats-title">Sessions</label>
+                        </div>
 
-                <div class = "monthly-stats-container">
-                    <div class = "monthly-stats-value">5</div>
-                    <label class = "stats-title">Avg Grade</label>
-                </div>
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">{{routesThisMonth}}</div>
+                            <label class = "stats-title">Routes</label>
+                        </div>
 
-            </section>
-            <section class = "data-title">All Routes Stats</section>
-                {{# userRoutes}}
-            <div class = "data-item">
-            <section class = "data-header">
-                <div class = "data-name-date">
-                    <div>{{name}}</div>
-                    <div>10/19/2020</div>
-                </div>
-                <section class = "data-edit-delete">
-                    <a href = "/users/edit/route/{{id}}">
-                        <button class = "route-delete-edit"><i class="fas fa-edit">Edit</i></button>
-                    </a>
-                    <form method = "POST" action = "/users/delete-route">
-                        <input type = "hidden" value={{id}} name = "id">
-                        <input type = "hidden" value={{session_Id}} name = "sessionid">
-                        <button class = "route-delete-edit"><i class="fas fa-trash"></i></button>    
-                    </form>
-                    
-                </section>
-            </section>
-                
-            <section class = "data-information">
-                <section id = "data-grade">
-                    <div>{{grade}}</div>
-                    <label id = "grade-label">Grade</label>
-                </section>
-                <section class = "data-categories">
-                    <div>color: {{color}}</div>
-                    <div>rating: {{rating}}</div>
-                    <div>attempts: {{attempts}}</div>
-                    <div>sent: {{sent}}</div>
-                </section>
-                <section id = "data-time">
-                    <div id = "time-value">1:35</div>
-                    <label id = "time-label">Time</label>
-                </section>
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">5.{{highestGradeMonth}}</div>
+                            <label class = "stats-title">Highest Grade</label>
+                        </div>
 
-            </section>
+                        <div class = "monthly-stats-container">
+                            <div class = "monthly-stats-value">5.{{avgGradeMonth}}</div>
+                            <label class = "stats-title">Avg Grade</label>
+                        </div>
+                    </section>
+                </div>
             </div>
 
+            <div id='allRoutesCont'>
+
+                <div id="allRoutesTitleCont">
+                    <h1 class = "statsTitle">All Routes</h1>
+                </div>
+
+                {{# userRoutes}}
+
+                    <div class = "data-item">
+                        <section class = "data-header">
+                            <div class='routeName routeColor-{{color}}' style="background: {{color}}">
+                                <h2>{{name}}</h2>
+                            </div>
+                            <div class = "date-edit-delete-cont">
+                                <div>{{formattedDate}}</div>
+                                <section class = "data-edit-delete">
+                                    <a href = "/users/edit/route/{{id}}">
+                                        <button class ="route-edit"><i class="fas fa-edit">Edit</i></button>
+                                    </a>
+                                    <form method = "POST" action = "/users/delete-route">
+                                        <input type = "hidden" value={{id}} name = "id">
+                                        <input type = "hidden" value={{session_Id}} name = "sessionid">
+                                        <button class = "route-delete"><i class="fas fa-trash"></i></button>    
+                                    </form>
+                                </section>
+                            </div>
+                            
+                        </section>
+                        
+                        <section class = "data-information">
+                            <section id = "data-grade">
+                                <div>{{grade}} </div>
+                                <label id = "grade-label">Grade</label>
+                            </section>
+                            <section class = "dataCategories">
+                                <div class="dataInfo"> Rating: {{rating}} stars</div>
+                                <div class="dataInfo"> Attempts: {{attempts}}</div>
+                                <div class="dataInfo sentCont"> Sent: <span class="sentBool-{{sent}}">{{sent}}</span></div>
+                            </section>
+                            <section id = "data-time">
+                                <div id = "time-value">{{formattedTime}}</div>
+                                <label id = "time-label">Time</label>
+                            </section>
+                        </section>
+
+                    </div>
+
                 {{/ userRoutes}}
-        </div>
+
+            </div>
+
+         </div>
+
+
 
 
         {{> navbar}}

@@ -30,7 +30,7 @@ app.use(session({
 }))
 app.use('/', indexRoutes) // any route at root handled in ./routes/index
 app.use('/users', authenticate.authenticate, userRoutes) // any route at /users/...
-// app.use('/users', userRoutes) // NO AUTHENTICATION, DELETE AND USE ABOVE FOR RELEASE!!!!
+// app.use('/users', userRoutes) // ------------ NO AUTHENTICATION, DELETE AND USE ABOVE FOR RELEASE!!!! ------------
 
 // STATIC FOLDERS
 app.use('/css', express.static('css')) // static folder for css at localhost:3000/css/style.css

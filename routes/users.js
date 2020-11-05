@@ -136,9 +136,10 @@ router.post('/map/saved-gyms', async(req,res) => {
 
 router.get('/data', async (req, res) => {
     let user = req.session.user.userId
+    // let user = 18 // TESTING ONLY USE ABOVE FOR RELEASE!!!!!!
     let routesArray = []
     let sessionsArray = []
-
+    
     let sessions = await models.UserSession.findAll({
         where: {
             userId: user
@@ -153,8 +154,14 @@ router.get('/data', async (req, res) => {
             userId: user
         }
     })
+
     for (let i = 0; i < routes.length; i++) {
-        routesArray.push(routes[i].dataValues)
+        let route = routes[i].dataValues
+
+        route.formattedDate = formatDate(route.createdAt)
+        route.formattedTime = findTimeDisplay(route.totalSeconds)
+
+        routesArray.push(route)
     }
 
     let timeArray = []
@@ -236,6 +243,74 @@ router.get('/data', async (req, res) => {
     })
     let percentageSent = Math.round((sentAmount / routesArray.length) * 100)
 
+    // ------ THIS MONTH'S STATS -----
+    let d = new Date()
+    let month = d.getMonth() + 1 // current month
+    let sessionsThisMonth = 0
+    let routesThisMonth = 0
+
+    // array of session months
+    let sessionMonths = sessionsArray.map(session => {
+        return (new Date(Date.parse(session.createdAt))).getMonth() + 1
+    })
+    // find sessions this month
+    sessionMonths.forEach(sessionMonth => {
+        if (sessionMonth == month) {
+            sessionsThisMonth++
+        }
+    })
+
+    // array of route months
+    let routeMonths = routesArray.map(route => {
+        return (new Date(Date.parse(route.createdAt))).getMonth() + 1
+    })
+    // find routes this month
+    routeMonths.forEach(routeMonth => {
+        if (routeMonth == month) {
+            routesThisMonth++
+        }
+    })
+
+    let gradesArrayMonth = []
+    let highestGradeMonth = 0
+    let avgGradeMonth = 0
+
+    // fill gradesArray
+    routesArray.forEach(route => {
+        if ((new Date(Date.parse(route.createdAt))).getMonth() + 1 == month) {
+            gradesArrayMonth.push(parseInt(route.grade.slice(2)))
+        }
+    })
+
+    // find highestGradeMonth
+    gradesArrayMonth.forEach(grade => {
+        if (grade > highestGradeMonth) {
+            highestGradeMonth = grade
+        }
+    })
+
+    // find avgGradeMonth
+    function findAvgGradeMonth(array) {
+        let gradeTotals = 0
+        array.forEach(grade => {
+            gradeTotals += grade
+        })
+        avgGradeMonth = Math.round(gradeTotals / array.length)
+    }
+    findAvgGradeMonth(gradesArrayMonth)
+
+    // format Date
+    function formatDate(routeDate) {
+        let fullDate = new Date(routeDate)
+        let year = fullDate.getFullYear()
+        let month = fullDate.getMonth() + 1
+        let day = fullDate.getDate()
+        let dateFormat = `${month} / ${day} / ${year}`
+
+        return dateFormat
+    }
+     
+
     let userObject = {
         totalSessions: sessionsArray.length,
         totalRoutes: routesArray.length,
@@ -245,7 +320,12 @@ router.get('/data', async (req, res) => {
         avgTime: findTimeDisplay(avgTime),
         highestGrade: highestGrade,
         avgGrade: avgGrade,
-        percentageSent: percentageSent
+        percentageSent: percentageSent,
+        sessionsThisMonth: sessionsThisMonth,
+        routesThisMonth: routesThisMonth,
+        highestGradeMonth: highestGradeMonth,
+        avgGradeMonth: avgGradeMonth,
+
     }
 
     res.render('users/data', userObject)

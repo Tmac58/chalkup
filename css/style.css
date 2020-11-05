@@ -1027,7 +1027,8 @@ sentCont {
           background: #6bbb57;
           color: white;
           border: 2px solid white;
-          z-index: 0.9
+          z-index: 0.9;
+          font-size: 1.2rem;
       }
       #locations-button:hover{
           background: #33ff00;
@@ -1060,7 +1061,7 @@ sentCont {
   /* Modal Content/Box */
   .modal-content {
     background-color: rgba(48, 47, 47, 0.6);
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -2187,7 +2188,7 @@ flex-direction: row;
   /* Modal Content/Box */
   .modal-content {
     background-color: rgba(48, 47, 47, 0.6);
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -2213,6 +2214,7 @@ flex-direction: row;
     margin:10px;
     width: 20%;
     border-radius: 25px;
+    font-size: 1.3rem;
 } 
 
 #locations-button:hover{

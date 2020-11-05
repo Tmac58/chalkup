@@ -957,6 +957,7 @@ sentCont {
           padding-right: 5px;
           overflow-y: auto;
           height: 400px;
+          width: 100%;
 
       }
 
@@ -1036,6 +1037,11 @@ sentCont {
       .holdsImg {
         border: 3px solid #6bbb57;
         width: 70%;
+      }
+
+      .techImg {
+          border: 3px solid #6bbb57;
+          max-height: 350px;
       }
 
       .video {

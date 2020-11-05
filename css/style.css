@@ -1060,6 +1060,7 @@ sentCont {
 /* ================== DESKTOP VIEW ================== */
 
 @media (min-width: 426px) {
+    
 
 body {
     background: #282828;

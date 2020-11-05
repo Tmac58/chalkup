@@ -89,7 +89,7 @@ body {
         background: #6bbb57;
         color: white;
         border: 2px solid white;
-        
+
     }
 
     #guestBtn {
@@ -242,7 +242,7 @@ body {
         color: red;
         margin-right: 10px;
     }
-}
+
 
 /*======================Map================================*/
 /* Always set the map height explicitly to define the size of the div
@@ -1051,3 +1051,1090 @@ sentCont {
         margin-top: 12vh;
     }
 
+}
+
+/* ================== DESKTOP VIEW ================== */
+
+@media (min-width: 426px) {
+
+body {
+    background: #282828;
+    margin: 0
+}
+
+.logoTitle {
+    font-size: 4em;
+}
+
+#goBackBtn {
+    color: #6bbb57;
+    margin-bottom: 0;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 4em;
+    cursor: pointer;
+}
+#goBackBtn:hover {
+    color: #33ff00;
+    outline: none;
+}
+
+.mainCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12vh;
+    margin-top:12vh;
+
+}
+
+#mainCont {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12vh;
+    margin-top:12vh;
+}
+
+#homepageCont {
+    margin: 0;
+}
+
+#registerCont {
+    margin: 0;
+}
+
+.logoCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6bbb57;
+    font-size:  2em;
+}
+
+.logoIconCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+.logoIcon {
+    height: 300px;
+}
+
+.signInBtnCont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.signInBtn {
+    margin: 10px;
+    font-size: 1.5em;
+    width: 250px;
+    background: none;
+    border-radius: 25px;
+    color: #6bbb57;
+    border: 2px solid #6bbb57;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.signInBtn:hover {
+    background: #6bbb57;
+    color: white;
+    border: 2px solid white;
+}
+
+#guestBtn {
+    margin-top: 30px;
+}
+
+.mainContLoginRegister {
+    margin-top: 10px;
+}
+
+.userIcon {
+    height: 350px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.inputCont form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signUpInput {
+    font-size: 2em;
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 16px 0 16px 0;
+    border-bottom: 5px solid #6bbb57;
+    color: white;
+    background: #5b5b5b;
+}
+.signUpInput:focus {
+    border-bottom: 5px solid #33ff00;
+    outline: none;
+}
+
+.showPasswordBtn {
+    font-size: 2em;
+    color: #6bbb57;
+    z-index: 1;
+    position: relative;
+    left: -60px;
+    width: 0;
+}
+
+#logInBtn {
+    margin-top: 40px;
+}
+#logInBtn:focus {
+    background: #6bbb57 !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+::placeholder {
+    color: white;
+}
+
+/*===========================================================*/
+#navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    height: 12vh;
+    width: 100vw;
+    background: rgb(18, 18, 18);
+}
+
+#nav-header{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 12vh;
+    width: 100vw;
+    background: rgb(18, 18, 18);
+}
+#content {
+    width: 100vw;
+    height: 80vh;
+    background: #2F2F2F;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #6bbb57;
+    font-size: 2.4rem;
+    height: inherit;
+}
+
+.nav-item{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #6bbb57;
+}
+
+.nav-title {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+
+/*====================HEADER================================*/
+
+.logoCont-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6bbb57;
+    font-size:  2rem;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.logoIconCont-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.4rem;
+    width: 2.4rem;
+
+}
+
+.logoIcon-header {
+    height: 4rem;
+    margin-top: 10px;
+
+}
+
+.logoTitle-header{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+.messageCont {
+    font-size: 1.2em;
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid red;
+    color: red;
+    display: flex;
+}
+
+.warning {
+    color: red;
+    margin-right: 10px;
+}
+
+
+/*======================Map================================*/
+/* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+   #map {
+    height: 90vh;
+    width: 100vw;
+  }
+  
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  #infowindow-content .title {
+    font-weight: bold;
+  }
+  
+  #infowindow-content {
+    display: none;
+  }
+  
+  #map #infowindow-content {
+    display: inline;
+  }
+
+.pac-card {
+margin: 10px 10px 0 0;
+border-radius: 2px 0 0 2px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+outline: none;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+background-color: #fff;
+font-family: Roboto;
+}
+
+#pac-container {
+padding-bottom: 12px;
+margin-right: 12px;
+}
+
+.pac-controls {
+display: inline-block;
+padding: 5px 11px;
+}
+
+.pac-controls label {
+font-family: Roboto;
+font-size: 13px;
+font-weight: 300;
+}
+
+#pac-input {
+background-color: #fff;
+font-family: Roboto;
+font-size: 15px;
+font-weight: 300;
+margin-left: 12px;
+padding: 0 11px 0 13px;
+text-overflow: ellipsis;
+width: 400px;
+}
+
+#pac-input:focus {
+border-color: #4d90fe;
+}
+
+#title {
+color: #fff;
+background-color: #4d90fe;
+font-size: 25px;
+font-weight: 500;
+padding: 6px 12px;
+}
+
+
+
+.testMenu {
+    height: 10vh;
+    background: #6bbb57;
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.addSessionCont {
+    margin-top: 130px;
+}
+
+#addSessionBtn {
+    background: #3c3c3c;
+    color: #6bbb57;
+    outline: none;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #6bbb57;
+    font-size: 1.1em;
+}
+#addSessionBtn:focus {
+    background: #6bbb57;
+    color: white;
+    border: 10px solid white;
+}
+
+#sessionTimerCont {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 20px;
+    border: 5px solid #6bbb57;
+    background: #3c3c3c;
+    color: white;
+    width: 355px;
+}
+
+#sessionTimeDisplay {
+    font-size: 5em;
+}
+
+.addRouteCont {
+    margin-top: 10px;
+    width: 100%;
+    display:flex;
+}
+
+#addRouteBtnCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    width: 50px;
+    height: 50px;
+    background: rgb(18, 18, 18);
+    color: #6bbb57;
+}
+
+#endSessionBtn {
+    color: red;
+    border: 2px solid red;
+}
+#endSessionBtn:focus {
+    background: rgb(255, 123, 123);
+    color: rgb(160, 0, 0);
+    border: 2px solid rgb(160, 0, 0);
+}
+
+#addRouteLabelCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #3c3c3c;
+    padding-right: 40px;
+    font-size: 1.2em;
+}
+
+#routeCont {
+    display: none; /*CHANGE TO NONE*/
+    flex-direction: column;
+    align-items: center;
+    height: 115vh;
+    width: 95%;
+    margin-top: 10px;
+    background: #3c3c3c;
+    color: #6bbb57;
+}
+#editrouteCont {
+    flex-direction: column;
+    align-items: center;
+    height: 115vh;
+    width: 95%;
+    margin-top: 10px;
+    background: #3c3c3c;
+    color: #6bbb57;
+}
+
+#addRouteForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#routeDetailsTitle{
+    color: #6bbb57;
+    margin: 10px;
+    border-bottom: 2px solid #6bbb57
+}
+
+.routeDetailsLabel {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#routeNameInput {
+    width: 90%;
+    text-align: center;
+}
+
+#routeNameInput::placeholder {
+    color: black;
+}
+
+#routeGrade {
+    width: 35%;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.sentLabel {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 90px;
+    height: 40px;
+    background: grey;
+    display: block;
+    border-radius: 40px;
+    position: relative;
+    outline:none;
+}
+.sentLabel:focus {
+    outline:none !important;
+}
+#sentSwitch {
+    outline:none !important;
+}
+
+.sentLabel:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 30px;
+    transition: 0.3s;
+    outline:none;
+}
+
+input:checked + label {
+    background: #6bbb57;
+    outline:none;
+}
+
+input:checked + .sentLabel:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    outline:none;
+}
+
+.sentLabel:active:after {
+    width: 40px;
+    outline:none;
+}
+
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+  }
+  
+  .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .rating label:last-child {
+    position: static;
+  }
+  
+  .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  .rating:not(:hover) label input:checked ~ .icon,
+  .rating:hover label:hover input ~ .icon {
+    color: #ffcc00;
+  }
+  
+  .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #ffcc00;
+  }
+
+  .routeInputText {
+      font-size: 1.2em;
+      border-radius: 16px 0 16px 0;
+  }
+
+  #incrementCont {
+      display: flex;
+      align-items: center;
+  }
+
+
+  #attemptsInput {
+      width: 70px;
+      text-align: center;
+  }
+
+  .incrementBtn {
+      color: #6bbb57;
+      background: none;
+      outline: none;
+      font-size: 1.5em;
+      margin-left: 15px;
+      margin-right: 15px;
+      border-radius: 50%;
+  }
+  .incrementBtn:focus {
+      color: #33ff00;
+  }
+
+  #submitRouteBtn {
+      margin-top: 50px;
+      padding: 10px;
+  }
+
+  /* ------ INFO PAGE -------- */
+  .infoCont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  #infoTitleCont {
+      margin-top: 0;
+  }
+
+  #infoTitle {
+      color: #6bbb57;
+      border-bottom: 1px solid #6bbb57;
+  }
+
+  .typesCont {
+      background: #121212;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .infoDetailTitle {
+      color: #6bbb57;
+      padding-left: 10px;
+  }
+
+
+
+/*==================DATA================*/
+#dataPageCont {
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+/* -------- TOTAL STATS ---------- */
+#totalStatsCont {
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom: 5px solid #6bbb57;
+}
+
+.statsTitle {
+color: white;
+border-bottom: 2px solid white;
+margin-bottom: 5px;
+font-size: 2.5em;
+}
+
+.dataRowCont {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 5px;
+}
+
+.rowLabel {
+color: white;
+font-size: 2em;
+border-bottom: 2px solid white;
+}
+
+.dataRow {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 10px;
+border: 3px solid #96ff7b;
+background: rgb(18, 18, 18);
+border-radius: 50%;
+width: 150px;
+height: 150px;
+padding: 5px;
+}
+
+.dataInputValue {
+margin: 0;
+margin-bottom: 5px;
+color: #6bbb57;
+font-size: 2.5em;
+}
+.dataInputLabel {
+margin: 0;
+color: white;
+font-size: 1.5em;
+}
+
+#totalSessRoutesCont {
+display: flex;
+color: white;
+}
+
+#monthStatsCont {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-bottom: 5px solid #6bbb57;
+padding-bottom: 20px;
+}
+
+#monthStatsDataCont {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.data-title{
+color: white;
+font-size: 1.5rem;
+padding: 0.75rem;
+width: 100vw;
+border-bottom: 2px solid white;
+}
+
+#monthStatsTitle{
+color: white;
+border-bottom: 2px solid white;
+font-size: 1.5rem;
+padding: 0.75rem;
+width: 100vw;
+}
+
+#allRoutesTitleCont {
+display:flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+
+.monthly-stats-container {
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+margin: 1rem;
+font-weight: 500;
+margin-bottom: 0rem;
+margin-left: 25px;
+margin-right: 25px;
+}
+.monthly-stats-value{
+display: flex;
+flex-direction: row;
+justify-content: center;
+font-size: 3rem;
+font-weight: 700;
+color: #6bbb57;
+}
+.stats-title{
+text-align: center;
+font-weight: 700;
+font-size: 1.5em;
+}
+#data-averages {
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.data-item{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.data-header{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+font-weight: 500;
+color: white;
+padding: 0.5rem;
+padding-bottom: 0rem;
+padding-top: 0;
+width: 60%;
+
+}
+
+.routeName {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.routeColor-red {
+background: rgb(255, 45, 45);
+}
+.routeColor-green {
+background: #6bbb57;
+}
+.routeColor-blue {
+background: rgb(0, 102, 255);
+}
+.routeColor-black {
+background: black;
+}
+.routeColor-grey {
+background: slategrey;
+}
+.routeColor-pink {
+background: rgb(255, 145, 163);
+}
+.routeColor-orange {
+background: rgb(255, 174, 23);
+}
+.routeColor-yellow {
+background: rgb(203, 203, 1);
+color: black;
+
+}
+
+
+
+
+.date-edit-delete-cont {
+display: flex;
+justify-content: space-between;
+width: 84%;
+}
+
+.data-name-data{
+display: flex;
+flex-direction: column;
+}
+
+.dataCategories {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items:center;
+font-size: 1.5em;
+}
+
+.data-information{
+display: flex;
+flex-direction: row;
+align-items: center;
+font-weight: 500;
+justify-content: space-between;
+color: white;
+margin-bottom: 0.5rem;
+width: 60%;
+
+}
+
+sentCont {
+display: inline;
+
+}
+
+.sentBool-true {
+color: #96ff7b;
+}
+.sentBool-false {
+color: rgb(255, 45, 45);
+}
+
+#data-grade {
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: 700;
+font-size: 4rem;
+padding-left: 90px;
+
+}
+
+#grade-label {
+color: #6bbb57;
+font-size: 2rem;
+}
+
+.dataInfo {
+margin-bottom: 5px;
+}
+
+#data-time {
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: 700;
+font-size: 4rem;
+padding-right: 90px;
+margin-bottom: 20px;
+}
+
+
+#time-label {
+color: #6bbb57;
+font-size: 2rem;
+}
+
+#data-averages {
+color: white;
+display: flex;
+flex-direction: row;
+}
+
+.route-edit {
+font-size: 1.2rem;
+color: rgb(0, 102, 255);
+border:none;
+background: transparent;
+cursor: pointer;
+}
+.route-edit:hover {
+    color: rgb(0, 145, 255);
+}
+
+.route-delete {
+font-size: 1.2rem;
+color: rgb(255, 45, 45);
+border:none;
+background: transparent;
+cursor: pointer;
+}
+.route-delete:hover {
+    color: rgb(255, 132, 0);
+}
+
+
+.data-edit-delete{
+display: flex;
+flex-direction: row;
+}
+
+.dataCategories {
+
+}
+
+  .moreInfo {
+      color: #6bbb57;
+      padding-right: 10px;
+      font-size: 1.3em;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  .shown {
+      display: block;
+  }
+
+  .infoContents {        
+      background: #3c3c3c;
+      padding-left: 5px;
+      padding-right: 5px;
+      overflow-y: auto;
+      height: 400px;
+
+  }
+
+  .infoContentText {
+      padding-left: 10px;
+  }
+
+  .infoContentsTextTitle {
+      color: white;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-bottom: 1px solid white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .infoContentsTextDetail {
+      color: white;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .imageCont {
+      display: flex;
+      justify-content: center;
+  }
+
+  #styleImage {
+      height:300px;
+      width: 200px;
+      margin-top: 10px;
+      border: 3px solid #6bbb57;
+  }
+
+  #gradeImage {
+    margin-bottom: 50px;
+    margin-top: 10px;
+    border: 3px solid #6bbb57;
+  }
+
+  #gearImage {
+      width: 400px;
+      margin-top: 10px;
+      border: 3px solid #6bbb57;
+  }
+
+  #chalkImage {
+      height: 150px;
+      width: 70%;
+      border: 3px solid #6bbb57;
+      margin-top: 5px;
+      margin-bottom: 5px;
+  }
+
+  #shoesImage {
+    border: 3px solid #6bbb57;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+  }
+
+  #shoeDetails {
+      margin-bottom: 150px;
+  }
+
+  .terminologyEntry {
+      margin-bottom: 10px;
+  }
+
+  .finalEntry {
+      margin-bottom: 150px;
+  }
+
+  .holdsImg {
+    border: 3px solid #6bbb57;
+    width: 70%;
+  }
+
+  .video {
+      border: 3px solid #6bbb57;
+      margin-top: 10px;
+  }
+
+  #map {
+    height: 80vh;
+}
+.mapCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+}
+
+}

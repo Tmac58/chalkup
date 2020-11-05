@@ -91,7 +91,7 @@ router.post('/login', async (req,res) => {
             }
         })
     } else {
-        res.redirect('/login')
+        res.render('login', {message: 'Incorrect username or password'})
     }
 })
 

@@ -2165,6 +2165,11 @@ flex-direction: row;
     height: 300px;
   }
 
+  .techImg {
+    border: 3px solid #6bbb57;
+    max-height: 400px;
+}
+
   .video {
       border: 3px solid #6bbb57;
       margin-top: 10px;

@@ -649,16 +649,13 @@ body {
           padding-left: 10px;
       }
     
-<<<<<<< HEAD
-=======
-
->>>>>>> 43a048933ce60ba45a02444f9ba0106a69261122
 
 /*==================DATA================*/
 #dataPageCont {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 /* -------- TOTAL STATS ---------- */
@@ -1056,46 +1053,6 @@ sentCont {
         margin-top: 12vh;
     }
 
-<<<<<<< HEAD
-/*====================Modal===================*/
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: rgba(48, 47, 47, 0.6);
-    font-size: 0.8rem;
-    color: white;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
- .location-title{
-     font-size: 1.1rem;
-     width: 100%;
-     padding-bottom: 0.3rem;
-     border-bottom: 1px white solid;
- }
- .location-content{
-     padding-top: 0.3rem;
-     margin-left: 0.5rem;
- }
- #locations-button{
-    z-index: 0.5; /* Sit on top */
- }
-=======
 }
 
 /* ================== DESKTOP VIEW ================== */
@@ -1110,6 +1067,7 @@ body {
 
 .logoTitle {
     font-size: 4em;
+    margin-top: 10px;
 }
 
 #goBackBtn {
@@ -1199,7 +1157,7 @@ body {
 }
 
 .mainContLoginRegister {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .userIcon {
@@ -1239,7 +1197,7 @@ body {
 }
 
 #logInBtn {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 #logInBtn:focus {
     background: #6bbb57 !important;
@@ -1265,7 +1223,7 @@ body {
     overflow: hidden;
     position: fixed;
     top: 0;
-    height: 15vh;
+    height: 140px;
     width: 100vw;
     background: rgb(18, 18, 18);
 }
@@ -1328,7 +1286,7 @@ body {
 }
 
 .logoIcon-header {
-    height: 4rem;
+    height: rem;
     margin-top: 40px;
     padding-bottom: 5px;
     height: 75px;
@@ -1338,7 +1296,7 @@ body {
 .logoTitle-header{
     font-size: 2.2rem;
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 
 }
 
@@ -1551,7 +1509,7 @@ padding: 6px 12px;
     align-items: center;
     height: 115vh;
     width: 95%;
-    margin-top: 10px;
+    margin-top: 50px;
     background: #3c3c3c;
     color: #6bbb57;
 }
@@ -1566,7 +1524,8 @@ padding: 6px 12px;
     color: #6bbb57;
     margin: 10px;
     border-bottom: 2px solid #6bbb57;
-    font-size: 1.5em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .routeDetailsLabel {
@@ -1801,6 +1760,10 @@ color: white;
 border-bottom: 2px solid white;
 margin-bottom: 5px;
 font-size: 2.5em;
+}
+
+#totalStatsTitle {
+    margin-top: 50px;
 }
 
 .dataRowCont {
@@ -2205,4 +2168,3 @@ flex-direction: row;
 }
 
 }
->>>>>>> 43a048933ce60ba45a02444f9ba0106a69261122

@@ -13,17 +13,24 @@
   <body>
     <div class="mainCont">
         {{> navHeader}}
-        <input
-        id="pac-input"
-        class="controls"
-        type="text"
-        placeholder="Search Box"
-      />
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          {{# locations}}
+          <div class = "location-title">{{gym_name}}</div>
+          <div class = "location-content">{{address}}</div>
+          <div class = "location-content">rating: {{rating}} in {{reviews}} reviews</div>
+          {{/ locations}}
+        </div>
+      
+      </div>
+      <button
+      id="locations-button">View Table</button>
       <div id="map"></div>
       
       {{> navbar}}
       </div>
-    
+    <script src = "/js/location-modal.js"></script>
     <script src= "/js/maps.js"></script>
   </body>
 </html>

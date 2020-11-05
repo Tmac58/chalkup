@@ -88,8 +88,21 @@ router.post('/end-session', async (req,res) => {
 })
 // --------------MAP ROUTES ---------------
 
-router.get('/map', (req, res) => {
-    res.render('users/map')
+router.get('/map', async(req, res) => {
+    let locationsArray = []
+    let user = req.session.user.userId
+
+    let savedLocations = await models.gymlocation.findAll({
+        where: {
+            userId: user
+        }
+    })
+
+    savedLocations.forEach(location => {
+        locationsArray.push(location.dataValues)
+    })
+    console.log(locationsArray)
+    res.render('users/map', {locations:locationsArray})
 })
 
 // ------------LocationsData -----------
@@ -100,8 +113,6 @@ router.post('/map/saved-gyms', async(req,res) => {
     let rating = req.body.rating
     let reviews = req.body.reviews
     let userId = req.session.user.userId
-
-    console.log('sending')
 
     let location = await models.gymlocation.build({
         gym_name: gymName,

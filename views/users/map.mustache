@@ -8,12 +8,11 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi1mGkCAUSHtMZ6pRCWg8VoVhkj5ROb1c&callback=init&libraries=places&v=weekly"
       defer
     ></script>
-    <!-- jsFiddle will insert css and js -->
   </head>
   <body>
     <div class="mapCont">
         {{> navHeader}}
-      <div id="myModal" class="modal">
+      <div id="locationsModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           {{# locations}}

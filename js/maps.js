@@ -1,16 +1,27 @@
-
 const apiKey = "AIzaSyCi1mGkCAUSHtMZ6pRCWg8VoVhkj5ROb1c"
 const testData = []
-window.addToList = function(props){
-  if (testData.includes(props)){
-    console.log('props in array')
+
+window.addToList = function(name, address, rating, reviews){
+  console.log(name)
+  const obj = {
+    name: name,
+    address: address,
+    rating: rating,
+    reviews: reviews}
+
+    
+    fetch('/users/map/saved-gyms',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(obj)
+    })
+      .then(response => response.json())
+      .then(json => console.log(json))
+    
+
   }
-  
-  else{
-  testData.push(props)
-  console.log(testData)
-  }
-}
 
 function init() {
   const successCallback = (async(position) => {
@@ -42,13 +53,19 @@ function init() {
     const infowindow = new google.maps.InfoWindow()
     const service = new google.maps.places.PlacesService(map);
     
-
+    console.log(data.results)
     for (let i = 0 ; i<data.results.length; i++){
       let location = data.results[i].geometry.location
+        let name = data.results[i].name
+        let address = data.results[i].formatted_address
+        let rating = parseInt(data.results[i].rating)
+        let reviews = data.results[i].user_ratings_total
+  
       const marker = new google.maps.Marker({
           position: location,
           map:map,
       })
+
       google.maps.event.addListener(marker, "click", function () {
         infowindow.setContent(
           `<div><strong>
@@ -60,8 +77,8 @@ function init() {
               Rating:  
               ${data.results[i].rating}
               from ${data.results[i].user_ratings_total} reviews
-            </div>
-            <button onclick = "window.addToList('${data.results[i].name}')">Add</button>
+            </div>                
+            <button onclick = "window.addToList('${name}', '${address}', '${rating}', '${reviews}')">Add</button>
             </div>`
         );        
 

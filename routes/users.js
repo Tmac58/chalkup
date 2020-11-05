@@ -5,11 +5,13 @@ const { v4: uuidv4 } = require('uuid'); // for unique ids
 const models = require('../models') //sequelize models //go up 2-routes to find folder
 const session = require('express-session');
 const { route } = require('.');
+const { response } = require('express');
 
 //---------- ADD-CLIMB PAGE ROUTES -----------
+router.use(express.json())
 router.get('/logout', (req, res) => {
 
-    if (req.ression) {
+    if (req.session) {
         req.session.isAuthenticated = false
         req.session.destroy((error) => {
             if (error) {
@@ -88,6 +90,35 @@ router.post('/end-session', async (req,res) => {
 
 router.get('/map', (req, res) => {
     res.render('users/map')
+})
+
+// ------------LocationsData -----------
+
+router.post('/map/saved-gyms', async(req,res) => {
+    let gymName = req.body.name
+    let address = req.body.address
+    let rating = req.body.rating
+    let reviews = req.body.reviews
+    let userId = req.session.user.userId
+
+    console.log('sending')
+
+    let location = await models.gymlocation.build({
+        gym_name: gymName,
+        address: address,
+        rating: rating,
+        reviews: reviews,
+        userId: userId
+    })
+
+    location.save()
+     console.log(req.body)
+     console.log('Got request')
+
+     res.json({
+         status: 'success'
+     })
+
 })
 
 // ---------- DATA PAGE ROUTES -------------
@@ -271,6 +302,7 @@ router.post('/delete-route', (req, res) => {
 router.get('/info', (req, res) => {
     res.render('users/info')
 })
+
 
 
 // export to app.js

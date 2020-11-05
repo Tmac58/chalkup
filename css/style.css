@@ -1219,7 +1219,7 @@ body {
     overflow: hidden;
     position: fixed;
     top: 0;
-    height: 12vh;
+    height: 15vh;
     width: 100vw;
     background: rgb(18, 18, 18);
 }
@@ -1246,10 +1246,15 @@ body {
     justify-content: center;
     text-decoration: none;
     color: #6bbb57;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.nav-item:hover {
+    color: #33ff00;
 }
 
 .nav-title {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
 }
 
@@ -1278,12 +1283,14 @@ body {
 
 .logoIcon-header {
     height: 4rem;
-    margin-top: 10px;
-
+    margin-top: 40px;
+    padding-bottom: 5px;
+    height: 75px;
+    width: 75px;
 }
 
 .logoTitle-header{
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 
@@ -1410,12 +1417,13 @@ padding: 6px 12px;
     color: #6bbb57;
     outline: none;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border: 10px solid #6bbb57;
-    font-size: 1.1em;
+    font-size: 2em;
+    cursor: pointer;
 }
-#addSessionBtn:focus {
+#addSessionBtn:hover {
     background: #6bbb57;
     color: white;
     border: 10px solid white;

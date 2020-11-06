@@ -14,8 +14,8 @@ const authenticate = require('./authenticate')
 // path for directory ./views
 const VIEWS_PATH = path.join(__dirname, '/views')
 // local host port
-//const PORT = 3000  // LOCAL PORT ONLY!!!
- const PORT = process.env.PORT || 8080
+const PORT = 3000  // LOCAL PORT ONLY!!!
+//  const PORT = process.env.PORT || 8080
 //salt rounds for password encryption
 SALT_ROUNDS = 10
 

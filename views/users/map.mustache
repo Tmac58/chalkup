@@ -16,7 +16,14 @@
         <div class="modal-content">
           <span class="close">&times;</span>
           {{# locations}}
-          <div class = "location-title">{{gym_name}}</div>
+          <div class ="location-title-container">
+            <div class = "location-title">{{gym_name}}</div>
+            <form method="POST" action="/users/map/saved-gyms/delete">
+              <input type="hidden" value={{id}} name="id">
+              <button class = "route-delete"><i class="fas fa-trash"></i></button>    
+            </form>
+          </div>
+          
           <div class = location-content-container>
             <div class = "location-content">{{address}}</div>
             <div class = "location-content">rating: {{rating}} in {{reviews}} reviews</div>

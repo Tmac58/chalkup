@@ -123,13 +123,20 @@ router.post('/map/saved-gyms', async(req,res) => {
     })
 
     location.save()
-     console.log(req.body)
-     console.log('Got request')
+     res.redirect('/users/map')
 
-     res.json({
-         status: 'success'
-     })
+})
 
+router.post('/map/saved-gyms/delete' , async(req,res) => {
+    let id = req.body.id
+
+    models.gymlocation.destroy({
+        where: {
+            id: id
+        }
+    })
+        .then(result => console.log(result))
+    res.redirect('/users/map')
 })
 
 // ---------- DATA PAGE ROUTES -------------

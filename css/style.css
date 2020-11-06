@@ -795,6 +795,9 @@ body {
 .routeColor-pink {
     background: rgb(255, 145, 163);
 }
+.routeColor-purple {
+    background: rgb(136, 25, 136);
+}
 .routeColor-orange {
     background: rgb(255, 174, 23);
 }

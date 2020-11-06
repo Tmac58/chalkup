@@ -417,12 +417,21 @@ body {
         text-align: center;
     }
 
+    #routeNameInputEdit {
+        width: 50%;
+        text-align: center;
+    }
+
     #routeNameInput::placeholder {
         color: black;
     }
 
     #routeGrade {
         width: 35%;
+    }
+
+    #routeGradeEdit {
+        width: 25%
     }
 
     input[type=checkbox]{
@@ -1531,13 +1540,24 @@ padding: 6px 12px;
     text-align: center;
 }
 
+#routeNameInputEdit {
+    width: 25%;
+    text-align: center;
+}
+
 #routeNameInput::placeholder {
     color: black;
 }
 
 #routeGrade {
-    width: 35%;
+    width: 40%;
 }
+
+#routeGradeEdit {
+    width: 6%
+}
+
+
 
 input[type=checkbox]{
     height: 0;
@@ -1916,6 +1936,9 @@ background: slategrey;
 }
 .routeColor-pink {
 background: rgb(255, 145, 163);
+}
+.routeColor-purple {
+background: rgb(136, 25, 136);
 }
 .routeColor-orange {
 background: rgb(255, 174, 23);

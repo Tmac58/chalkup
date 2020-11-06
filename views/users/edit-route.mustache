@@ -18,10 +18,10 @@
             <form id="addRouteForm" action="/users/edit-routes" method="POST">
 
                 <label class="routeDetailsLabel" for="routeName">Name</label>
-                <input class="routeInputText" value = {{name}} type="text" name='routeName' id='routeNameInput' placeholder='Route Name' style="padding: 5px 10px;">
+                <input class="routeInputText" value = {{name}} type="text" name='routeName' id='routeNameInputEdit' placeholder='Route Name' style="padding: 5px 10px;">
                 <input class = "routeId" type = "hidden" name = "routeId" value = {{id}}>
                 <label class="routeDetailsLabel" for='routeGrade'>Grade</label>
-                <select class='routeInputText routeGrade' id="routeGrade" name="routeGrade" style="padding: 5px 10px;" value = {{grade}}>
+                <select class='routeInputText routeGrade' id="routeGradeEdit" name="routeGrade" style="padding: 5px 10px;" value = {{grade}}>
                     <option value="5.5">5.5</option>
                     <option value="5.6">5.6</option>
                     <option value="5.7">5.7</option>

@@ -4,23 +4,19 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 
 # <h2 align="center">![Visitor Count](https://profile-counter.glitch.me/{NathanNOSudo}/count.svg) Thank you for stopping by!
 
-
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/mattquint111/CHALK-UP">
-    ![logo-image](images/Screen Shot 2020-11-07 at 9.25.09 AM.png)
+     <img align="center" src="images/Screen Shot 2020-11-07 at 9.25.09 AM.png">
   </a>
 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
+
+* [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -33,62 +29,31 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 * [Acknowledgements](#acknowledgements)
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-I put this together to show what a detailed README is like. This README is written and styled in Markdown.  You can edit this eitehr in the browser or your code editor. VScode does have a Markdown extension which will show you the syntax highlighting.
-
-Why doing this detailed README is important:
-* Recruiters who looks at your project might not know how to reade code.
-* You an reuse it over and over again. Save time and work on your projects more by just editing this to match your next project!
-* You should element DRY principles to the rest of your life :smile:
-
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`
-
-
-### Built With
-* [JavaScript](https://javascript.com)
-<!-- 
-* []() not the above example of how to link in Markdown.
--->
-
+## Built With
+* JavaScript, Node.js, Express, Sequelize, HTML, CSS, Mustache, PostgreSQL
 
 <!-- GETTING STARTED -->
 ## Getting Started
-You should explain how to get your project up and running locally. EXAMPLE: To get a local copy up and running follow these simple steps.
+To set up a local copy of the project follow the steps below.
 
 ### Prerequisites
 
-Here is an example of what this should contain and how to do it. If it is required for the project it should go here.
-* UUID
+* In an empty folder initialize a new Node.js project.
 ```sh
-npm install npm@latest -g
+npm init
 ```
 
 ### Installation
 
 1. Clone to local machine
 ```sh
-git clone https://github.com/github_username/repo_name.git
+git clone https://https://github.com/mattquint111/CHALK-UP
 ```
 2. Install NPM packages
 ```sh
-npm install
-```
-3. 
-
-4. You need an API Key from [https://example.com](https://example.com). Then add your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+npm install bcrypt body-parser express express-session mustache-express sequelize
 ```
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.

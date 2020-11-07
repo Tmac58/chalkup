@@ -22,10 +22,7 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -98,20 +95,6 @@ git clone https://https://github.com/mattquint111/CHALK-UP
 npm install bcrypt body-parser express express-session mustache-express sequelize
 ```
 
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Project-Demo](https://example.com)_
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-Detail what you did as you do it. Add more info each time a feature is completed or a new feature is added/removed. You can also let people know of any known issues or new features by just linking to your:  [open issues](https://github.com/github_username/repo_name/issues). 
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -125,19 +108,13 @@ Either provide a [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contri
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Matthew Quint - www.linkedin.com/in/matt-quint - email: mattquint111@gmail.com 
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://https://github.com/mattquint111/CHALK-UP](https://https://github.com/mattquint111/CHALK-UP)
 
 
 
@@ -146,11 +123,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
  
   - **Nathan Orris** - **The Certified** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)- **DiR at DigitalCrafts Houston** -
     [NathanNoSudo](https://github.com/NathanNoSudo)
- - **Othneildrew**  -
-    [OthneilDrew](https://github.com/othneildrew)
-* [someone awesome1]()
-* [someone awesome2]()
-* [someone awesome3]()
+
 
 
 

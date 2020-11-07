@@ -112,7 +112,7 @@ Either provide a [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contri
 <!-- CONTACT -->
 ## Contact
 
-Matthew Quint - www.linkedin.com/in/matt-quint - email: mattquint111@gmail.com 
+**Matthew Quint** - www.linkedin.com/in/matt-quint - email: mattquint111@gmail.com 
 
 Project Link: [https://https://github.com/mattquint111/CHALK-UP](https://https://github.com/mattquint111/CHALK-UP)
 
@@ -123,6 +123,7 @@ Project Link: [https://https://github.com/mattquint111/CHALK-UP](https://https:/
  
   - **Nathan Orris** - **The Certified** [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)- **DiR at DigitalCrafts Houston** -
     [NathanNoSudo](https://github.com/NathanNoSudo)
+  - **Mohammad Azam** - https://github.com/azamsharp
 
 
 

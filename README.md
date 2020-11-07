@@ -4,38 +4,16 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 
 # <h2 align="center">![Visitor Count](https://profile-counter.glitch.me/{NathanNOSudo}/count.svg) Thank you for stopping by!
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/nathannosudo/readme-template-for-projects">
-    <img src="dcICON.png">
+  <a href="https://github.com/mattquint111/CHALK-UP">
+    ![logo-image](images/Screen Shot 2020-11-07 at 9.25.09 AM.png)
   </a>
-
-  <h3 align="center">DigitalCrafts Project</h3><!-- YOUR_TITLE-->
-    
-  <p align="center"><!-- YOUR_SHORT_DESCRIPTION -->
-**DigitalCrafts Houston Full-Stack Developer** Description of what the repo contains ie. "Immersive program week 4 course-work. This repo contains primarly JavaScript related coursework  including; assignments, practice,activities and projects.  During week 4 we covered JavaScript, Front-end, Validation, and manipulating the DOM."
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</p>
-
 
 
 <!-- TABLE OF CONTENTS -->

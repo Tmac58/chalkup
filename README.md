@@ -1,19 +1,7 @@
-# <p align="center">readme-template-for-projects
-This repo is to show what a detailed README should include. This README is written and styled in Markdown.  You can edit this either in the browser or your code editor. VScode does have a Markdown extension which will show you the syntax highlighting.</p>
+# <p align="center">![logo-image](images/logo-title.png)
+CHALK-UP is a rock climbing workout tracker app designed specifically for indoor rock climbing. Users can create an account and start tracking their climbing sessions. Routes can quickly and easily be saved during a workout to track a users progress and give insights into a users overall stats. </p>
 
-<!--
-*** Reuse this template to avoid retyping. Do a search and replace for the following that relate to you:
-*** github_username, repo_name, twitter_handle, email
--->
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables along with a few blank ones just needing content
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use. Your editor may have an extension availabale. VSCode does for sure. You can add badges like ordinary snippets by pressing a few keys.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 # <h2 align="center">![Visitor Count](https://profile-counter.glitch.me/{NathanNOSudo}/count.svg) Thank you for stopping by!
 
 [![Contributors][contributors-shield]][contributors-url]

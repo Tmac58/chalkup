@@ -1,5 +1,5 @@
 # <p align="center">![logo-image](images/logo-title.png)
-CHALK-UP is a rock climbing workout tracker app designed specifically for indoor rock climbing. Users can create an account and start tracking their climbing sessions. Routes can quickly and easily be saved during a workout to track a users progress and give insights into a users overall stats. </p>
+CHALK-UP is a rock climbing workout tracker app designed specifically for indoor rock climbing with a focus on mobile design. Users can create an account and start tracking their climbing sessions. Routes can quickly and easily be saved during a workout to track a users progress and give insights into a users overall stats. </p>
 
 
 # <h2 align="center">![Visitor Count](https://profile-counter.glitch.me/{NathanNOSudo}/count.svg) Thank you for stopping by!
@@ -10,6 +10,7 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
   <a href="https://github.com/mattquint111/CHALK-UP">
      <img align="center" src="images/Screen Shot 2020-11-07 at 9.25.09 AM.png">
   </a>
+</p>
 
 
 <!-- TABLE OF CONTENTS -->
@@ -17,11 +18,11 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 
 
 * [Built With](#built-with)
+* [Screenshots and Use](#screenshots-and-use)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Videos And Screenshots](#videos-and-screenshots)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -31,6 +32,49 @@ CHALK-UP is a rock climbing workout tracker app designed specifically for indoor
 
 ## Built With
 * JavaScript, Node.js, Express, Sequelize, HTML, CSS, Mustache, PostgreSQL
+
+## Screenshots
+
+<p align="center"><b>Desktop View (left), Mobile View (right)</b></p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.56.00 AM.png"> 
+<p align="center">App homescreen allows user to login/register or login as a guest.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.56.19 AM.png"> 
+<p align="center">User log in screen.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.56.36 AM.png"> 
+<p align="center">Once a user logs in they are taken to their data page where climb stats are displayed.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.56.59 AM.png"> 
+<p align="center">Data page also display stats for the month and shows details of individual routes entered.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.57.14 AM.png"> 
+<p align="center">On the climb page users can click start session to create a new climbing session and start adding routes.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.57.36 AM.png"> 
+<p align="center">Users can start adding their routes or end the session once they are done.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.58.16 AM.png"> 
+<p align="center">Each route has inputs for name, grade, route color, number of attempts, sent toggle, and star rating.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.59.00 AM.png"> 
+<p align="center">Nearby page finds rock climbing gyms close to the user and allows them to save gyms to thier profile.</p>
+<br>
+
+<img align="center" src="images/Screen Shot 2020-11-07 at 9.59.33 AM.png"> 
+<p align="center">Info page has basic info for those new to rock climbing as well as sections on more advanced techniques and holds for the more experienced climber.</p>
+<br>
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -59,12 +103,6 @@ npm install bcrypt body-parser express express-session mustache-express sequeliz
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Project-Demo](https://example.com)_
-
-## Videos and Screenshots
-
-Display videos, gifs are the easiest. Also include screenshots of the project, diffrent features or what not.
-<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif"> 
-![dbzcode](https://user-images.githubusercontent.com/49554888/96146084-8b1cc300-0ecb-11eb-8025-1cb8b2e734f5.png)
 
 
 <!-- ROADMAP -->

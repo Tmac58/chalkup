@@ -113,6 +113,7 @@ Either provide a [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contri
 ## Contact
 
 **Matthew Quint** - www.linkedin.com/in/matt-quint - email: mattquint111@gmail.com 
+
 **Luigi Siopongco** - www.linkedin.com/in/luigi-siopongco - lsiopongco54@gmail.com 
 
 

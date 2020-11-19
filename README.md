@@ -114,7 +114,7 @@ Either provide a [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contri
 
 **Matthew Quint** - www.linkedin.com/in/matt-quint - email: mattquint111@gmail.com 
 
-**Luigi Siopongco** - www.linkedin.com/in/luigi-siopongco - lsiopongco54@gmail.com 
+**Luigi Siopongco** - www.linkedin.com/in/luigi-siopongco - email: lsiopongco54@gmail.com 
 
 
 Project Link: [https://https://github.com/mattquint111/CHALK-UP](https://https://github.com/mattquint111/CHALK-UP)
